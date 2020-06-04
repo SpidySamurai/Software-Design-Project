@@ -10,6 +10,7 @@ package com.proyecto.provisional;
  * @author Javier
  */
 class Cliente {
+
     private String nombreCliente;
     private CarritodeCompras carrito;
     private Tienda tiendaActual;

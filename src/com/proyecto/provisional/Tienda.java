@@ -13,7 +13,8 @@ import java.util.Enumeration;
  *
  * @author Javier
  */
-public class Tienda implements FactoryTienda{
+public class Tienda implements FactoryTienda {
+
     private String nombreTienda;
     private String idTienda;
     private ArrayList<Articulo> articulos;
@@ -21,38 +22,37 @@ public class Tienda implements FactoryTienda{
 
     @Override
     public void entrar() {
-        
+
     }
 
     @Override
     public void salir() {
-        
+
     }
-    
-    public Enumeration clientesTienda(){
+
+    public Enumeration clientesTienda() {
         return null;
-        
+
     }
-    
-    public Enumeration articulosTienda(){
+
+    public Enumeration articulosTienda() {
         return null;
-        
+
     }
-    
-    public void addACarrito(CarritodeCompras cdc, Articulo art){
-        
+
+    public void addACarrito(CarritodeCompras cdc, Articulo art) {
+
     }
-    
-    public void ElimDeCarrito(CarritodeCompras cdc, Articulo art){
-        
+
+    public void ElimDeCarrito(CarritodeCompras cdc, Articulo art) {
+
     }
-    
-    public void addArticulo(Articulo art){
-        
+
+    public void addArticulo(Articulo art) {
+
     }
-    
+
 //    public void crearPaquete(ArrayList articulos, descuento){
 //        METODO POR ACLARAR QUE RECIBIRA EXACTAMENTE
 //    }
-    
 }

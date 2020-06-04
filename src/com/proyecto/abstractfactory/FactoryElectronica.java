@@ -10,5 +10,5 @@ package com.proyecto.abstractfactory;
  * @author Javier
  */
 public class FactoryElectronica {
-    
+
 }

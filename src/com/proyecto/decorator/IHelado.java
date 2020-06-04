@@ -10,5 +10,5 @@ package com.proyecto.decorator;
  * @author Javier
  */
 public interface IHelado {
-    
+
 }

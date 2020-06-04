@@ -10,6 +10,7 @@ package com.proyecto.provisional;
  * @author Javier
  */
 public class Articulo {
+
     private String nombreArt;
     private String idArticulo;
     private String idTienda;

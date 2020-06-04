@@ -12,13 +12,14 @@ import java.util.ArrayList;
  * @author Javier
  */
 public class CentroComercial {
+
     //Atributos básicos
     private String nombreCentroComercial;
     private ArrayList<Tienda> tiendas;
-    private ArrayList<Cliente> clientes; 
-    
-    public CentroComercial(){
-        
+    private ArrayList<Cliente> clientes;
+
+    public CentroComercial() {
+
     }
-    
+
 }

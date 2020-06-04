@@ -10,6 +10,8 @@ package com.proyecto.abstractfactory;
  * @author Javier
  */
 public interface FactoryTienda {
+
     abstract void entrar();
+
     abstract void salir();
 }

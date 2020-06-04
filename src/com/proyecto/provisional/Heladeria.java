@@ -10,5 +10,5 @@ package com.proyecto.provisional;
  * @author Javier
  */
 public class Heladeria {
-    
+
 }
