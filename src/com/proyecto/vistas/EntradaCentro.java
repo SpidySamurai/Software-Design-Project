@@ -66,7 +66,7 @@ public class EntradaCentro extends javax.swing.JFrame {
         msjBienvenida.setText("Buen dia (nombre)! Bienvenido al Centro Comercial!");
         jPanel1.add(msjBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 380, 30));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/FondoInicio.jpg"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoInicio.jpg"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
