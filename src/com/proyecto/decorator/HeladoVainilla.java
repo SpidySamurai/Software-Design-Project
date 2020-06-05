@@ -7,16 +7,10 @@ package com.proyecto.decorator;
 
 /**
  *
- * @author Javier
+ * @author LEFT4
  */
-public abstract class IHelado {
-    double precio;
-    
-    public void setPrecio(double precio){
-        this.precio = precio;
-    }
-    
-    public double Precio(){
-        return precio;
+public class HeladoVainilla extends IHelado{
+    public HeladoVainilla(){
+        setPrecio(8);
     }
 }
