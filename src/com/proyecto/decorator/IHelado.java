@@ -9,14 +9,8 @@ package com.proyecto.decorator;
  *
  * @author Javier
  */
-public abstract class IHelado {
-    double precio;
+public interface IHelado {
     
-    public void setPrecio(double precio){
-        this.precio = precio;
-    }
+    public abstract double precio();
     
-    public double Precio(){
-        return precio;
-    }
 }
