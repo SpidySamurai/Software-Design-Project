@@ -45,7 +45,7 @@ public class EntradaCentro extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_Carrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/carro-de-la-compra (1).png"))); // NOI18N
-        jPanel1.add(btn_Carrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 60, 50));
+        jPanel1.add(btn_Carrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 50, 40));
 
         tituloHeladeria.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tituloHeladeria.setForeground(new java.awt.Color(255, 255, 255));
@@ -65,19 +65,9 @@ public class EntradaCentro extends javax.swing.JFrame {
                 btn_HeladeriaMouseExited(evt);
             }
         });
-        btn_Heladeria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_HeladeriaActionPerformed(evt);
-            }
-        });
         jPanel1.add(btn_Heladeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 200, 380));
 
         btn_Electronica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/ElectronicaLOGO.png"))); // NOI18N
-        btn_Electronica.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_ElectronicaActionPerformed(evt);
-            }
-        });
         jPanel1.add(btn_Electronica, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 430, 190));
 
         tituloRelojeria.setBackground(new java.awt.Color(0, 0, 0));
@@ -87,20 +77,12 @@ public class EntradaCentro extends javax.swing.JFrame {
         jPanel1.add(tituloRelojeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 150, 20));
 
         btn_Relojeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/RelojeriaLOGO (1).png"))); // NOI18N
-        btn_Relojeria.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn_RelojeriaMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn_RelojeriaMouseExited(evt);
-            }
-        });
         jPanel1.add(btn_Relojeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 430, 180));
 
         msjBienvenida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         msjBienvenida.setForeground(new java.awt.Color(255, 255, 255));
         msjBienvenida.setText("Buen dia (nombre)! Bienvenido al Centro Comercial!");
-        jPanel1.add(msjBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 380, 30));
+        jPanel1.add(msjBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 30));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoInicio.jpg"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 450));
@@ -126,22 +108,6 @@ public class EntradaCentro extends javax.swing.JFrame {
     private void btn_HeladeriaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HeladeriaMouseExited
        
     }//GEN-LAST:event_btn_HeladeriaMouseExited
-
-    private void btn_RelojeriaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RelojeriaMouseEntered
-//        btn_Relojeria.setOpaque(false);
-    }//GEN-LAST:event_btn_RelojeriaMouseEntered
-
-    private void btn_RelojeriaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_RelojeriaMouseExited
-//        btn_Relojeria.setOpaque(true);
-    }//GEN-LAST:event_btn_RelojeriaMouseExited
-
-    private void btn_HeladeriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_HeladeriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_HeladeriaActionPerformed
-
-    private void btn_ElectronicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ElectronicaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_ElectronicaActionPerformed
 
     /**
      * @param args the command line arguments
