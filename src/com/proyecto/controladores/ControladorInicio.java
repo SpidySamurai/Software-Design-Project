@@ -14,28 +14,32 @@ import java.awt.event.ActionListener;
  * @author Javier
  */
 public class ControladorInicio implements ActionListener {
-
+    
     private VistaInicial vInicial;
-
+    
     public ControladorInicio() {
         this.vInicial = new VistaInicial();
         this.addListener();
-
+        
     }
-
+    
     private void addListener() {
         //Botones
         this.vInicial.getjBIngresar().addActionListener(this);
-
+        
     }
-
+    
+    public void iniciarVista() {
+        this.vInicial.setVisible(true);
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (this.vInicial.getjBIngresar() == e.getSource()) {
             this.vInicial.dispose();
             new ControladorCentro().iniciarVista();
         }
-
+        
     }
-
+    
 }

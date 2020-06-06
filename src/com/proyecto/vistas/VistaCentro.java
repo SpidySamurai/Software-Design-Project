@@ -55,22 +55,19 @@ public class VistaCentro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btn_Carrito = new javax.swing.JButton();
         tituloHeladeria = new javax.swing.JLabel();
         tituloElectronica = new javax.swing.JLabel();
+        tituloRelojeria = new javax.swing.JLabel();
+        msjBienvenida = new javax.swing.JLabel();
+        btn_Carrito = new javax.swing.JButton();
         btn_Heladeria = new javax.swing.JButton();
         btn_Electronica = new javax.swing.JButton();
-        tituloRelojeria = new javax.swing.JLabel();
         btn_Relojeria = new javax.swing.JButton();
-        msjBienvenida = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btn_Carrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/carro-de-la-compra (1).png"))); // NOI18N
-        jPanel1.add(btn_Carrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 50, 40));
 
         tituloHeladeria.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tituloHeladeria.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,6 +77,20 @@ public class VistaCentro extends javax.swing.JFrame {
         tituloElectronica.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         tituloElectronica.setText("ELECTRONICA");
         jPanel1.add(tituloElectronica, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, -1, -1));
+
+        tituloRelojeria.setBackground(new java.awt.Color(0, 0, 0));
+        tituloRelojeria.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        tituloRelojeria.setForeground(new java.awt.Color(204, 204, 255));
+        tituloRelojeria.setText("RELOJERIA");
+        jPanel1.add(tituloRelojeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 150, 20));
+
+        msjBienvenida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        msjBienvenida.setForeground(new java.awt.Color(255, 255, 255));
+        msjBienvenida.setText("Buen dia (nombre)! Bienvenido al Centro Comercial!");
+        jPanel1.add(msjBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 30));
+
+        btn_Carrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/carro-de-la-compra (1).png"))); // NOI18N
+        jPanel1.add(btn_Carrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 50, 40));
 
         btn_Heladeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/HeladeriaLOGO.png"))); // NOI18N
         btn_Heladeria.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -95,19 +106,8 @@ public class VistaCentro extends javax.swing.JFrame {
         btn_Electronica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/ElectronicaLOGO.png"))); // NOI18N
         jPanel1.add(btn_Electronica, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 430, 190));
 
-        tituloRelojeria.setBackground(new java.awt.Color(0, 0, 0));
-        tituloRelojeria.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        tituloRelojeria.setForeground(new java.awt.Color(204, 204, 255));
-        tituloRelojeria.setText("RELOJERIA");
-        jPanel1.add(tituloRelojeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 150, 20));
-
         btn_Relojeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/RelojeriaLOGO (1).png"))); // NOI18N
         jPanel1.add(btn_Relojeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 430, 180));
-
-        msjBienvenida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        msjBienvenida.setForeground(new java.awt.Color(255, 255, 255));
-        msjBienvenida.setText("Buen dia (nombre)! Bienvenido al Centro Comercial!");
-        jPanel1.add(msjBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 30));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoInicio.jpg"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 450));

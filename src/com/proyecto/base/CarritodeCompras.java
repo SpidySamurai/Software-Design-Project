@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.provisional;
+package com.proyecto.base;
 
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -15,7 +15,7 @@ import java.util.Enumeration;
 public class CarritodeCompras {
 
     private ArrayList<Articulo> articulos;
-    private int capacity; //Numero limite de articulos que se pueden llevar en un carrito
+    private int capacidad; //Numero limite de articulos que se pueden llevar en un carrito
 
     public Enumeration articulosCarrito() {
         return null;

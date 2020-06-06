@@ -3,17 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.decorator;
+package com.proyecto.base;
 
 /**
  *
- * @author LEFT4
+ * @author Javier
  */
-public class HeladoChoco implements IHelado{
+class Cliente {
 
-    @Override
-    public double precio() {
-        return 9.5;
-    }
-    
+    private String nombreCliente;
+    private CarritodeCompras carrito;
+    private Tienda tiendaActual;
 }

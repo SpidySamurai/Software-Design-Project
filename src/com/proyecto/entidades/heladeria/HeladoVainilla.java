@@ -3,21 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.decorator;
+package com.proyecto.entidades.heladeria;
+
+import com.proyecto.base.Articulo;
+import com.proyecto.decorator.IHelado;
 
 /**
  *
  * @author LEFT4
  */
-public class ConoChocolate extends DecoradorHelado{
-
-    private double precio = 10;
+public class HeladoVainilla extends Articulo implements IHelado{
 
     @Override
     public double precio() {
-        return this.getHelado().precio() + precio;
+        return 9.5;
     }
-
-    
     
 }

@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.decorator;
+package com.proyecto.entidades.heladeria;
+
+import com.proyecto.decorator.DecoradorHelado;
 
 /**
  *
  * @author LEFT4
  */
-public class CerezasHelado extends DecoradorHelado{
-    
-    private double precio = 6;
+public class ChispasChocolate extends DecoradorHelado{
+
+    private double precio = 8;
 
     @Override
     public double precio() {

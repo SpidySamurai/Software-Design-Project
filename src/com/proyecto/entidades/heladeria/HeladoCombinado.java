@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.decorator;
+package com.proyecto.entidades.heladeria;
+
+import com.proyecto.decorator.IHelado;
+import com.proyecto.base.Articulo;
 
 /**
  *
  * @author LEFT4
  */
-public class HeladoCombinado implements IHelado{
+public class HeladoCombinado extends Articulo implements IHelado{
 
     @Override
     public double precio() {

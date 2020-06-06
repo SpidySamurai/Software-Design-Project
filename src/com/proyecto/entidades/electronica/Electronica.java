@@ -3,17 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.decorator;
+package com.proyecto.entidades.electronica;
+
+import com.proyecto.base.Tienda;
 
 /**
  *
- * @author LEFT4
+ * @author Javier
  */
-public class HeladoVainilla implements IHelado{
+public class Electronica extends Tienda{
 
-    @Override
-    public double precio() {
-        return 9.5;
-    }
-    
 }

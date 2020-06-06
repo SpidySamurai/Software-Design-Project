@@ -43,20 +43,19 @@ public class VistaInicial extends javax.swing.JFrame {
         jlFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLNombreCentro.setBackground(new java.awt.Color(255, 255, 255));
         jLNombreCentro.setFont(new java.awt.Font("Gill Sans MT", 2, 24)); // NOI18N
+        jLNombreCentro.setForeground(new java.awt.Color(255, 255, 255));
         jLNombreCentro.setText("CENTRO COMERCIAL SOFTWAREMART");
         jPanel1.add(jLNombreCentro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 50));
-
-        jTCliente.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.add(jTCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 260, 30));
 
         jBIngresar.setText("Ingresar");
-        jPanel1.add(jBIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 80, 30));
+        jPanel1.add(jBIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 90, 30));
 
         jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoInicio.jpg"))); // NOI18N
         jPanel1.add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 200));
