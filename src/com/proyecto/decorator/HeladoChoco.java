@@ -9,8 +9,11 @@ package com.proyecto.decorator;
  *
  * @author LEFT4
  */
-public class HeladoChoco extends IHelado{
-    public HeladoChoco(){
-        setPrecio(8);
+public class HeladoChoco implements IHelado{
+
+    @Override
+    public double precio() {
+        return 9.5;
     }
+    
 }

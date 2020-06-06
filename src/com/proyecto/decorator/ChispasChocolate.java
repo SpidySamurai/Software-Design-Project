@@ -12,14 +12,11 @@ package com.proyecto.decorator;
 public class ChispasChocolate extends DecoradorHelado{
 
     private double precio = 8;
+
     @Override
-    public double getPrecio() {
-       return this.helado.Precio();
+    public double precio() {
+        return this.getHelado().precio() + precio;
     }
-    
-    public ChispasChocolate (IHelado helado){
-        this.setHelado(helado);
-        this.helado.setPrecio(this.helado.Precio()+precio);
-    }
+
     
 }

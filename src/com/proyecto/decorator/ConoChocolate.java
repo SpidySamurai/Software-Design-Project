@@ -12,14 +12,12 @@ package com.proyecto.decorator;
 public class ConoChocolate extends DecoradorHelado{
 
     private double precio = 10;
+
     @Override
-    public double getPrecio() {
-        return this.helado.precio;
+    public double precio() {
+        return this.getHelado().precio() + precio;
     }
+
     
-    public ConoChocolate(IHelado helado){
-        this.setHelado(helado);
-        this.helado.setPrecio(this.helado.Precio()+precio);
-    }
     
 }
