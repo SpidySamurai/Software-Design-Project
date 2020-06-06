@@ -20,5 +20,5 @@ public abstract class DecoradorHelado implements IHelado{
         return helado;
     }
     
-    public abstract double getPrecio();
+    public abstract double precio();
 }
