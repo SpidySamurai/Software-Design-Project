@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.proyecto.controladores;
+
+import com.proyecto.vistas.VistaCentro;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+/**
+ *
+ * @author Javier
+ */
+public class ControladorCentro implements ActionListener {
+
+    private VistaCentro vistaCentro;
+
+    public ControladorCentro() {
+        this.vistaCentro = new VistaCentro();
+        this.addListener();
+
+    }
+
+    private void addListener() {
+        this.vistaCentro.getBtn_Carrito().addActionListener(this);
+        this.vistaCentro.getBtn_Heladeria().addActionListener(this);
+        this.vistaCentro.getBtn_Relojeria().addActionListener(this);
+        this.vistaCentro.getBtn_Electronica().addActionListener(this);
+
+    }
+
+    public void iniciarVista() {
+        this.vistaCentro.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (this.vistaCentro.getBtn_Carrito() == e.getSource()) {
+
+        }
+        if (this.vistaCentro.getBtn_Heladeria() == e.getSource()) {
+
+        }
+        if (this.vistaCentro.getBtn_Relojeria() == e.getSource()) {
+
+        }
+        if (this.vistaCentro.getBtn_Electronica() == e.getSource()) {
+
+        }
+    }
+
+}

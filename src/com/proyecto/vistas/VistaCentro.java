@@ -6,19 +6,44 @@
 package com.proyecto.vistas;
 
 import java.awt.Color;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
  * @author LEFT4
  */
-public class EntradaCentro extends javax.swing.JFrame {
+public class VistaCentro extends javax.swing.JFrame {
 
     /**
      * Creates new form EntradaCentro
      */
-    public EntradaCentro() {
+    public VistaCentro() {
         initComponents();
+        setLocationRelativeTo(null);
     }
+
+    public JButton getBtn_Carrito() {
+        return btn_Carrito;
+    }
+
+    public JButton getBtn_Electronica() {
+        return btn_Electronica;
+    }
+
+    public JButton getBtn_Heladeria() {
+        return btn_Heladeria;
+    }
+
+    public JButton getBtn_Relojeria() {
+        return btn_Relojeria;
+    }
+
+    public JLabel getMsjBienvenida() {
+        return msjBienvenida;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -106,7 +131,7 @@ public class EntradaCentro extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_HeladeriaMouseEntered
 
     private void btn_HeladeriaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HeladeriaMouseExited
-       
+        
     }//GEN-LAST:event_btn_HeladeriaMouseExited
 
     /**
@@ -126,20 +151,23 @@ public class EntradaCentro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EntradaCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EntradaCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EntradaCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EntradaCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaCentro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EntradaCentro().setVisible(true);
+                new VistaCentro().setVisible(true);
                 
             }
         });
