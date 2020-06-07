@@ -37,7 +37,6 @@ public class VistaInicial extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLNombreCentro = new javax.swing.JLabel();
         jTCliente = new javax.swing.JTextField();
         jBIngresar = new javax.swing.JButton();
         jlFondo = new javax.swing.JLabel();
@@ -46,18 +45,12 @@ public class VistaInicial extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLNombreCentro.setBackground(new java.awt.Color(255, 255, 255));
-        jLNombreCentro.setFont(new java.awt.Font("Gill Sans MT", 2, 24)); // NOI18N
-        jLNombreCentro.setForeground(new java.awt.Color(255, 255, 255));
-        jLNombreCentro.setText("CENTRO COMERCIAL SOFTWAREMART");
-        jPanel1.add(jLNombreCentro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 50));
-        jPanel1.add(jTCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 260, 30));
+        jPanel1.add(jTCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 260, 30));
 
         jBIngresar.setText("Ingresar");
-        jPanel1.add(jBIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 90, 30));
+        jPanel1.add(jBIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 90, 30));
 
-        jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoInicio.jpg"))); // NOI18N
+        jlFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoInicio.png"))); // NOI18N
         jPanel1.add(jlFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 200));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -112,7 +105,6 @@ public class VistaInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBIngresar;
-    private javax.swing.JLabel jLNombreCentro;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTCliente;
     private javax.swing.JLabel jlFondo;
