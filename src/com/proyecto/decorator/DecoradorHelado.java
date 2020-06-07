@@ -12,6 +12,10 @@ package com.proyecto.decorator;
 public abstract class DecoradorHelado implements IHelado{
     private IHelado helado;
     
+    @Override
+    public abstract double precio();
+    
+    
     public void setHelado(IHelado helado){
         this.helado = helado;
     }
@@ -20,5 +24,4 @@ public abstract class DecoradorHelado implements IHelado{
         return helado;
     }
     
-    public abstract double precio();
 }
