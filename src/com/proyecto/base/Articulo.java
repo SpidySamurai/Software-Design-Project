@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.provisional;
+package com.proyecto.base;
 
 /**
  *
  * @author Javier
  */
-public class Electronica {
-    
+public class Articulo {
+
+    private String nombreArt;
+    private String idArticulo;
+    private String idTienda;
+    private String precio;
 }

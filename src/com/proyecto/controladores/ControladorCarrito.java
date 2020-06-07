@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.provisional;
+package com.proyecto.controladores;
 
 /**
  *
  * @author Javier
  */
-class Cliente {
-    private String nombreCliente;
-    private CarritodeCompras carrito;
-    private Tienda tiendaActual;
+public class ControladorCarrito {
+    
 }

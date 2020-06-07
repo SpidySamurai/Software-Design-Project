@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.observer;
+package com.proyecto.entidades.heladeria;
+
+import com.proyecto.base.Tienda;
 
 /**
  *
  * @author Javier
  */
-public interface Observer {
+public class Heladeria extends Tienda {
 
 }

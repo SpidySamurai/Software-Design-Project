@@ -10,5 +10,5 @@ package com.proyecto.state;
  * @author Javier
  */
 public class EstadoConArticulos {
-    
+
 }

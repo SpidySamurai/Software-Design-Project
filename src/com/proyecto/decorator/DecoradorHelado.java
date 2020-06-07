@@ -9,6 +9,16 @@ package com.proyecto.decorator;
  *
  * @author Javier
  */
-public class DecoradorHelado {
+public abstract class DecoradorHelado implements IHelado{
+    private IHelado helado;
     
+    public void setHelado(IHelado helado){
+        this.helado = helado;
+    }
+    
+    public IHelado getHelado(){
+        return helado;
+    }
+    
+    public abstract double precio();
 }

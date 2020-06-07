@@ -11,4 +11,6 @@ package com.proyecto.decorator;
  */
 public interface IHelado {
     
+    public abstract double precio();
+    
 }

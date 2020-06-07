@@ -10,6 +10,7 @@ package com.proyecto.singleton;
  * @author Javier
  */
 public abstract class Singleton {
+
     public abstract void getInstance();
-    
+
 }
