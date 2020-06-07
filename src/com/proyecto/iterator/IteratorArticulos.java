@@ -5,7 +5,7 @@
  */
 package com.proyecto.iterator;
 
-import com.proyecto.base.Articulo;
+import com.proyecto.base.Tienda;
 import com.proyecto.entidades.relojeria.Relojeria;
 import java.util.Iterator;
 
@@ -14,9 +14,10 @@ import java.util.Iterator;
  * @author Javier
  */
 public class IteratorArticulos implements Iterator{
-
-    public IteratorArticulos(Articulo art){
-        
+    
+    private int[] listaArticulos;
+    public IteratorArticulos(Tienda art){
+        art.articulosTienda();
     }
     @Override
     public Object next() {
