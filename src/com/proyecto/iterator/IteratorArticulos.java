@@ -5,8 +5,11 @@
  */
 package com.proyecto.iterator;
 
+import com.proyecto.base.Articulo;
 import com.proyecto.base.Tienda;
 import com.proyecto.entidades.relojeria.Relojeria;
+import java.util.ArrayList;
+//import java.util.Enumeration;
 import java.util.Iterator;
 
 /**
@@ -15,18 +18,22 @@ import java.util.Iterator;
  */
 public class IteratorArticulos implements Iterator{
     
-    private int[] listaArticulos;
-    public IteratorArticulos(Tienda art){
-        art.articulosTienda();
-    }
-    @Override
-    public Object next() {
-        return null;
+    private Articulo art;
+    ArrayList<Articulo> listaArticulos;
+    private int posicion;
+
+    public IteratorArticulos(Articulo art){
+        this.art = art;
     }
 
     @Override
     public boolean hasNext() {
-        return false;
+        return this.posicion < this.art.getArticulo().size();
+    }
+
+    @Override
+    public Articulo next() {
+        return this.art.getArticulo().get(posicion++); //Falta una parte
     }
     
 
