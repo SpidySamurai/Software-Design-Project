@@ -16,6 +16,7 @@ public class VistaRelojeria extends javax.swing.JFrame {
      */
     public VistaRelojeria() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /**

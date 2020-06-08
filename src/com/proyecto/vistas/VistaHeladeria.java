@@ -16,6 +16,7 @@ public class VistaHeladeria extends javax.swing.JFrame {
      */
     public VistaHeladeria() {
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /**

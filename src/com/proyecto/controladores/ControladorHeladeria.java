@@ -5,10 +5,26 @@
  */
 package com.proyecto.controladores;
 
+import com.proyecto.vistas.VistaHeladeria;
+
 /**
  *
  * @author Javier
  */
-public class ControladorHeladeria {
+public class ControladorHeladeria{
+    
+    private VistaHeladeria vHeladeria;
+    
+    public ControladorHeladeria(){
+       this.vHeladeria = new VistaHeladeria();
+    }
+    
+    public void addListener(){
+        
+    }
+    
+    public void iniciarVista(){
+        
+    }
     
 }
