@@ -6,8 +6,6 @@
 package com.proyecto.iterator;
 
 import com.proyecto.base.Articulo;
-import com.proyecto.base.Tienda;
-import com.proyecto.entidades.relojeria.Relojeria;
 import java.util.ArrayList;
 //import java.util.Enumeration;
 import java.util.Iterator;

@@ -5,10 +5,34 @@
  */
 package com.proyecto.controladores;
 
+import com.proyecto.vistas.VistaElectronica;
+import com.proyecto.vistas.VistaHeladeria;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Javier
  */
-public class ControladorElectronica {
+public class ControladorElectronica implements ActionListener {
     
+    private VistaElectronica vElectronica;
+    
+    public ControladorElectronica(){
+        vElectronica = new VistaElectronica();
+    }
+    
+    public void addListener(){
+        
+    }
+    
+    public void iniciarVista(){
+        vElectronica.setVisible(true);
+    }
+    
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+    }
 }
