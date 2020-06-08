@@ -82,7 +82,7 @@ public class VistaCentro extends javax.swing.JFrame {
         btn_Relojeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/RelojeriaLOGO.png"))); // NOI18N
         jPanel1.add(btn_Relojeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 430, 180));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoCentro.jpg"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoCentro.png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 450));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
