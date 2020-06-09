@@ -5,12 +5,14 @@
  */
 package com.proyecto.singleton;
 
+import com.proyecto.base.Tienda;
+
 /**
  *
  * @author Javier
  */
-public abstract class Singleton {
+public interface Singleton {
 
-    public abstract void getInstance();
+    public abstract Tienda getInstance();
 
 }

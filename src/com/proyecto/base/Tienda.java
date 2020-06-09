@@ -6,6 +6,7 @@
 package com.proyecto.base;
 
 import com.proyecto.abstractfactory.FactoryTienda;
+import com.proyecto.singleton.Singleton;
 import java.util.ArrayList;
 import java.util.Enumeration;
 
@@ -13,7 +14,7 @@ import java.util.Enumeration;
  *
  * @author Javier
  */
-public class Tienda implements FactoryTienda {
+public class Tienda implements FactoryTienda, Singleton{
 
     private String nombreTienda;
     private String idTienda;
@@ -55,4 +56,9 @@ public class Tienda implements FactoryTienda {
 //    public void crearPaquete(ArrayList articulos, descuento){
 //        METODO POR ACLARAR QUE RECIBIRA EXACTAMENTE
 //    }
+
+    @Override
+    public Tienda getInstance() {
+        return getInstance();
+    }
 }
