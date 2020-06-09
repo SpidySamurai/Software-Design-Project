@@ -12,11 +12,11 @@ import com.proyecto.base.Articulo;
  *
  * @author LEFT4
  */
-public class HeladoCombinado extends Articulo implements IHelado{
+public class HeladoCombinado extends Articulo implements IHelado {
 
     @Override
     public double precio() {
         return 11.5;
     }
-    
+
 }

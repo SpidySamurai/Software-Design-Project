@@ -11,8 +11,8 @@ import com.proyecto.decorator.DecoradorHelado;
  *
  * @author LEFT4
  */
-public class CerezasHelado extends DecoradorHelado{
-    
+public class CerezasHelado extends DecoradorHelado {
+
     private double precio = 6;
 
     @Override
@@ -20,5 +20,4 @@ public class CerezasHelado extends DecoradorHelado{
         return this.getHelado().precio() + precio;
     }
 
-    
 }

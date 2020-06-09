@@ -9,9 +9,14 @@ package com.proyecto.base;
  *
  * @author Javier
  */
-class Cliente {
+public class Cliente {
 
-    private String nombreCliente;
-    private CarritodeCompras carrito;
+    private final String nombreCliente;
+    private CarritoCompras carrito;
     private Tienda tiendaActual;
+
+    public Cliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
 }

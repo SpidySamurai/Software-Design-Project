@@ -12,19 +12,19 @@ import com.proyecto.vistas.VistaElectronica;
  * @author Javier
  */
 public class ControladorElectronica {
-    
+
     private VistaElectronica vElectronica;
-    
-    public ControladorElectronica(){
+
+    public ControladorElectronica() {
         this.vElectronica = new VistaElectronica();
     }
-    
-    public void addListener(){
-        
+
+    public void addListener() {
+
     }
-    
-    public void iniciarVista(){
-        
+
+    public void iniciarVista() {
+
     }
-    
+
 }

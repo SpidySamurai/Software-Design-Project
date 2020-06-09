@@ -18,16 +18,16 @@ public class Articulo {
     private String idTienda;
     private String precio;
     private ArrayList<Articulo> listaArticulos;
-    
-    public Articulo(){
+
+    public Articulo() {
         this.listaArticulos = new ArrayList<Articulo>();
     }
-    
-    public void addArticulo(Articulo art){
+
+    public void addArticulo(Articulo art) {
         this.listaArticulos.add(art);
     }
-    
-    public ArrayList<Articulo> getArticulo(){
+
+    public ArrayList<Articulo> getArticulo() {
         return this.listaArticulos;
     }
 }

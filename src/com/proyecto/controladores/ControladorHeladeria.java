@@ -11,20 +11,20 @@ import com.proyecto.vistas.VistaHeladeria;
  *
  * @author Javier
  */
-public class ControladorHeladeria{
-    
+public class ControladorHeladeria {
+
     private VistaHeladeria vHeladeria;
-    
-    public ControladorHeladeria(){
-       this.vHeladeria = new VistaHeladeria();
+
+    public ControladorHeladeria() {
+        this.vHeladeria = new VistaHeladeria();
     }
-    
-    public void addListener(){
-        
+
+    public void addListener() {
+
     }
-    
-    public void iniciarVista(){
-        
+
+    public void iniciarVista() {
+
     }
-    
+
 }

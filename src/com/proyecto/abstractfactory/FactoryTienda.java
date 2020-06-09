@@ -11,7 +11,4 @@ package com.proyecto.abstractfactory;
  */
 public interface FactoryTienda {
 
-    abstract void entrar();
-
-    abstract void salir();
 }

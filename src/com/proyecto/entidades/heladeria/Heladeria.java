@@ -7,13 +7,11 @@ package com.proyecto.entidades.heladeria;
 
 import com.proyecto.base.Tienda;
 
-
-
 /**
  *
  * @author Javier
  */
-public class Heladeria extends Tienda{
+public class Heladeria extends Tienda {
 
     private Heladeria helado;
 
@@ -21,12 +19,7 @@ public class Heladeria extends Tienda{
         this.helado = helado;
     }
 
-    @Override
-    public Tienda getInstance() {
-        return helado.getInstance();
-    }
+ 
     
-    
-    
-    
+
 }

@@ -12,18 +12,19 @@ import com.proyecto.vistas.VistaRelojeria;
  * @author Javier
  */
 public class ControladorRelojeria {
+
     private VistaRelojeria vRelojeria;
-    
-    public ControladorRelojeria(){
+
+    public ControladorRelojeria() {
         this.vRelojeria = new VistaRelojeria();
     }
-    
-    public void addListener(){
-        
+
+    public void addListener() {
+
     }
-    
-    public void iniciarVista(){
+
+    public void iniciarVista() {
         this.vRelojeria.setVisible(true);
     }
-    
+
 }

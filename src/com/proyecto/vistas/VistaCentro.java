@@ -41,8 +41,6 @@ public class VistaCentro extends javax.swing.JFrame {
     public JLabel getMsjBienvenida() {
         return msjBienvenida;
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -133,7 +131,7 @@ public class VistaCentro extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VistaCentro().setVisible(true);
-                
+
             }
         });
     }

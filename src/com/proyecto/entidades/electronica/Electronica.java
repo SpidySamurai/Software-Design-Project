@@ -11,13 +11,10 @@ import com.proyecto.base.Tienda;
  *
  * @author Javier
  */
-public class Electronica extends Tienda{
+public class Electronica extends Tienda {
+
     private Electronica electronico;
 
-    @Override
-    public Tienda getInstance() {
-        return electronico.getInstance();
-    }
-    
+  
     
 }

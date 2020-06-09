@@ -12,7 +12,7 @@ import java.util.Enumeration;
  *
  * @author Javier
  */
-public class CarritodeCompras {
+public class CarritoCompras {
 
     private ArrayList<Articulo> articulos;
     private int capacidad; //Numero limite de articulos que se pueden llevar en un carrito

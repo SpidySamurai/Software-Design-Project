@@ -11,13 +11,10 @@ import com.proyecto.base.Tienda;
  *
  * @author Javier
  */
-public class Relojeria extends Tienda{
+public class Relojeria extends Tienda {
 
     private Relojeria reloj;
-    @Override
-    public Tienda getInstance() {
-        return reloj.getInstance();
-    }
 
-    
+   
+
 }
