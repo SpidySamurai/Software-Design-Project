@@ -17,6 +17,7 @@ public class HeladoVainilla extends Articulo implements IHelado {
     @Override
     public double precio() {
         return 9.5;
+        
     }
 
 }

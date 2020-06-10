@@ -5,22 +5,49 @@
  */
 package com.proyecto.base;
 
-import com.proyecto.abstractfactory.FactoryTienda;
 import com.proyecto.singleton.Singleton;
 import java.util.ArrayList;
-import java.util.Enumeration;
 
 /**
  *
  * @author Javier
  */
-public abstract class Tienda {
+public abstract class Tienda implements Singleton{
 
-    private String nombreTienda;
-    private int idTienda;
-    private ArrayList<Articulo> articulosTienda;
-    private ArrayList<Cliente> clientesTienda;
-    
-    
+    private final String nombreTienda;
+    private final String idTienda;
+    private final ArrayList<Articulo> articulosTienda;
+    private final ArrayList<Cliente> clientesTienda;
+
+    protected Tienda(String nombreTienda, String idTienda) {
+        articulosTienda = new ArrayList<>();
+        clientesTienda = new ArrayList<>();
+        this.nombreTienda = nombreTienda;
+        this.idTienda = idTienda;
+    }
+
+    public abstract void entrarCliente(Cliente cliente);
+
+    public abstract void salirCliente(Cliente cliente);
+
+    public abstract ArrayList<Cliente> getClientesTienda();
+
+    public abstract ArrayList<Articulo> getArticulosTienda();
+
+    public abstract void añadirAlCarrito(CarritoCompras carritoCompras, Articulo producto);
+
+    public abstract void eliminarDelCarrito(CarritoCompras carritoCompras, Articulo producto);
+
+    public abstract void añadirProductoTienda(Articulo producto);
+
+    public abstract void crearPaquete(ArrayList<Articulo> productos, double descuento);
+
+    public String getNombreTienda() {
+        return nombreTienda;
+    }
+
+    public String getIdTienda() {
+        return idTienda;
+    }
 
 }

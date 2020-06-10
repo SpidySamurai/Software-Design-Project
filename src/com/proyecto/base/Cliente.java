@@ -9,7 +9,7 @@ package com.proyecto.base;
  *
  * @author Javier
  */
-public class Cliente {
+public final class Cliente {
 
     private final String nombreCliente;
     private CarritoCompras carrito;
