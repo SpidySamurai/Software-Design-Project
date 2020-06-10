@@ -13,21 +13,14 @@ import java.util.ArrayList;
  */
 public class Articulo {
 
-    private String nombreArt;
+    private String nombreArticulo;
     private String idArticulo;
     private String idTienda;
-    private String precio;
-    private ArrayList<Articulo> listaArticulos;
+    private double precioArticulo;
 
-    public Articulo() {
-        this.listaArticulos = new ArrayList<Articulo>();
+    public Articulo(String nombreArt,String idArt,String indTienda,double precioArt
+        this.nombreArticulo = nombreArt;
     }
 
-    public void addArticulo(Articulo art) {
-        this.listaArticulos.add(art);
-    }
-
-    public ArrayList<Articulo> getArticulo() {
-        return this.listaArticulos;
-    }
+   
 }
