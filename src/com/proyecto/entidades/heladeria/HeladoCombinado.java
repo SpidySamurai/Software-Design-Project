@@ -14,6 +14,10 @@ import com.proyecto.base.Articulo;
  */
 public class HeladoCombinado extends Articulo implements IHelado {
 
+    public HeladoCombinado(String nombreArt, String idArt, String idTienda, double precioArt) {
+        super("Helado combinado", "HEL02", "HELBASH", 11.5);
+    }
+
     @Override
     public double precio() {
         return 11.5;

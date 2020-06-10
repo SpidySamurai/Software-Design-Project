@@ -12,16 +12,15 @@ import com.proyecto.decorator.IHelado;
  *
  * @author LEFT4
  */
-public class HeladoVainilla extends Articulo implements IHelado {
+public class HeladoOreo extends Articulo implements IHelado{
 
-    public HeladoVainilla(String nombreArt, String idArt, String idTienda, double precioArt) {
-        super("Helado Vainilla", "HEL03", "HELBASH", 9.5);
+    public HeladoOreo(String nombreArt, String idArt, String idTienda, double precioArt) {
+        super("Helado Oreo", "HEL05", "HELBASH", 12.5);
     }
 
     @Override
     public double precio() {
-        return 9.5;
-        
+        return 12.5;
     }
-
+    
 }
