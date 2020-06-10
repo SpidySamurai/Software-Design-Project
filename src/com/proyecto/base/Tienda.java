@@ -5,81 +5,52 @@
  */
 package com.proyecto.base;
 
-import com.proyecto.abstractfactory.FactoryTienda;
-import com.proyecto.entidades.electronica.Electronica;
-import com.proyecto.entidades.heladeria.Heladeria;
-import com.proyecto.entidades.relojeria.Relojeria;
+
+
 import com.proyecto.singleton.Singleton;
 import java.util.ArrayList;
-import java.util.Enumeration;
 
 /**
  *
  * @author Javier
  */
-public class Tienda implements FactoryTienda, Singleton{
+public abstract class Tienda implements Singleton{
 
-    private String nombreTienda;
-    private String idTienda;
-    private ArrayList<Articulo> articulos;
-    private ArrayList<Cliente> clientes;
+    private final String nombreTienda;
+    private final String idTienda;
+    private final ArrayList<Articulo> articulosTienda;
+    private final ArrayList<Cliente> clientesTienda;
 
-    @Override
-    public void entrar() {
-
+    protected Tienda(String nombreTienda, String idTienda) {
+        articulosTienda = new ArrayList<>();
+        clientesTienda = new ArrayList<>();
+        this.nombreTienda = nombreTienda;
+        this.idTienda = idTienda;
     }
 
-    @Override
-    public void salir() {
+    public abstract void entrarCliente(Cliente cliente);
 
+    public abstract void salirCliente(Cliente cliente);
+
+    public abstract ArrayList<Cliente> getClientesTienda();
+
+    public abstract ArrayList<Articulo> getArticulosTienda();
+
+    public abstract void añadirAlCarrito(CarritoCompras carritoCompras, Articulo producto);
+
+    public abstract void eliminarDelCarrito(CarritoCompras carritoCompras, Articulo producto);
+
+    public abstract void añadirProductoTienda(Articulo producto);
+
+    public abstract void crearPaquete(ArrayList<Articulo> productos, double descuento);
+
+    public String getNombreTienda() {
+        return nombreTienda;
     }
 
-    public Enumeration clientesTienda() {
-        return null;
-
+    public String getIdTienda() {
+        return idTienda;
     }
 
-    public Enumeration articulosTienda() {
-        return null;
 
-    }
-
-    public void addACarrito(CarritodeCompras cdc, Articulo art) {
-
-    }
-
-    public void ElimDeCarrito(CarritodeCompras cdc, Articulo art) {
-
-    }
-
-    public void addArticulo(Articulo art) {
-
-    }
-
-//    public void crearPaquete(ArrayList articulos, descuento){
-//        METODO POR ACLARAR QUE RECIBIRA EXACTAMENTE
-//    }
-
-    @Override
-    public Tienda getInstance() {
-        return getInstance();
-    }
-
-    
-    
-    //SE RETORNAN NULOS YA QUE ESTA CLASEE EN PRINCIPIO NO VA A UTILIZAR ESTAS FUNCIONES
-    @Override
-    public Heladeria CreateHelado() {
-        return null;
-    }
-
-    @Override
-    public Relojeria CreateReloj() {
-        return null;
-    }
-
-    @Override
-    public Electronica CreateElectronico() {
-        return null;
-    }
 }

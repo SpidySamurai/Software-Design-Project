@@ -5,6 +5,8 @@
  */
 package com.proyecto.controladores;
 
+import com.proyecto.base.CentroComercial;
+import com.proyecto.base.Cliente;
 import com.proyecto.vistas.VistaCentro;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,8 +18,13 @@ import java.awt.event.ActionListener;
 public class ControladorCentro implements ActionListener {
 
     private VistaCentro vistaCentro;
+    private CentroComercial centroComercial;
 
-    public ControladorCentro() {
+    public ControladorCentro(Cliente cliente) {
+        centroComercial = new CentroComercial();
+        centroComercial.entrarCliente(cliente);
+        
+        
         this.vistaCentro = new VistaCentro();
         this.addListener();
 

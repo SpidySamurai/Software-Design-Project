@@ -20,5 +20,5 @@ public class demo {
         ControladorInicio controladorInicio = new ControladorInicio();
         controladorInicio.iniciarVista();
     }
-    
+
 }

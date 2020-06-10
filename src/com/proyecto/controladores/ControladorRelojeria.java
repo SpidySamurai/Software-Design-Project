@@ -5,10 +5,26 @@
  */
 package com.proyecto.controladores;
 
+import com.proyecto.vistas.VistaRelojeria;
+
 /**
  *
  * @author Javier
  */
 public class ControladorRelojeria {
-    
+
+    private VistaRelojeria vRelojeria;
+
+    public ControladorRelojeria() {
+        this.vRelojeria = new VistaRelojeria();
+    }
+
+    public void addListener() {
+
+    }
+
+    public void iniciarVista() {
+        this.vRelojeria.setVisible(true);
+    }
+
 }

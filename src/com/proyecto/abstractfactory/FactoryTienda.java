@@ -5,9 +5,9 @@
  */
 package com.proyecto.abstractfactory;
 
-import com.proyecto.entidades.electronica.Electronica;
-import com.proyecto.entidades.heladeria.Heladeria;
-import com.proyecto.entidades.relojeria.Relojeria;
+
+import com.proyecto.base.Tienda;
+
 
 /**
  *
@@ -15,13 +15,7 @@ import com.proyecto.entidades.relojeria.Relojeria;
  */
 public interface FactoryTienda{
 
-    abstract void entrar();
-
-    abstract void salir();
-    
-    abstract Heladeria CreateHelado();
-    
-    abstract Relojeria CreateReloj();
-    
-    abstract Electronica CreateElectronico();
+    public abstract Tienda crearTienda();
 }
+
+

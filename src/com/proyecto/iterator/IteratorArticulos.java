@@ -16,13 +16,13 @@ import java.util.Iterator;
  *
  * @author Javier
  */
-public class IteratorArticulos implements Iterator{
-    
+public class IteratorArticulos implements Iterator {
+
     private Articulo art;
     ArrayList<Articulo> listaArticulos;
     private int posicion;
 
-    public IteratorArticulos(Articulo art){
+    public IteratorArticulos(Articulo art) {
         this.art = art;
     }
 
@@ -35,8 +35,5 @@ public class IteratorArticulos implements Iterator{
     public Articulo next() {
         return this.art.getArticulo().get(posicion++); //Falta una parte
     }
-    
-
-
 
 }

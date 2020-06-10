@@ -5,14 +5,10 @@
  */
 package com.proyecto.singleton;
 
-import com.proyecto.base.Tienda;
-
 /**
  *
  * @author Javier
  */
 public interface Singleton {
-
-    public abstract Tienda getInstance();
 
 }

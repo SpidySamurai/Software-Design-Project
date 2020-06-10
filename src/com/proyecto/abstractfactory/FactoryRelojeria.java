@@ -5,39 +5,22 @@
  */
 package com.proyecto.abstractfactory;
 
-import com.proyecto.entidades.electronica.Electronica;
-import com.proyecto.entidades.heladeria.Heladeria;
+
+import com.proyecto.base.Tienda;
+
 import com.proyecto.entidades.relojeria.Relojeria;
 
 /**
  *
  * @author Javier
  */
-public class FactoryRelojeria implements FactoryTienda{
+
+public class FactoryRelojeria implements FactoryTienda {
 
     @Override
-    public void entrar() {
-        
-    }
+    public Tienda crearTienda() {
+        return Relojeria.getInstance();
 
-    @Override
-    public void salir() {
-        
-    }
-
-    @Override
-    public Heladeria CreateHelado() {
-        return null;
-    }
-
-    @Override
-    public Relojeria CreateReloj() {
-        return new Relojeria();
-    }
-
-    @Override
-    public Electronica CreateElectronico() {
-        return null;
     }
 
 }

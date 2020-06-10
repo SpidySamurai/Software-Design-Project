@@ -5,29 +5,23 @@
  */
 package com.proyecto.base;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Javier
  */
 public class Articulo {
 
-    private String nombreArt;
-    private String idArticulo;
-    private String idTienda;
-    private String precio;
-    private ArrayList<Articulo> listaArticulos;
-    
-    public Articulo(){
-        this.listaArticulos = new ArrayList<Articulo>();
+    private final String nombreArticulo;
+    private final String idArticulo;
+    private final String idTienda;
+    private final double precioArticulo;
+
+    public Articulo(String nombreArt, String idArt, String idTienda, double precioArt) {
+        this.nombreArticulo = nombreArt;
+        this.idArticulo = idArt;
+        this.idTienda = idTienda;
+        this.precioArticulo = precioArt;
+
     }
-    
-    public void addArticulo(Articulo art){
-        this.listaArticulos.add(art);
-    }
-    
-    public ArrayList<Articulo> getArticulo(){
-        return this.listaArticulos;
-    }
+
 }

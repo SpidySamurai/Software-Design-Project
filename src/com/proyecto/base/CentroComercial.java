@@ -11,15 +11,40 @@ import java.util.ArrayList;
  *
  * @author Javier
  */
-public class CentroComercial {
+public final class CentroComercial {
 
-    //Atributos básicos
-    private String nombreCentroComercial;
-    private ArrayList<Tienda> tiendas;
-    private ArrayList<Cliente> clientes;
+    private final String NOMBRE_CENTRO_COMERCIAL = "BASH";
+    private ArrayList<Tienda> listaTiendas;
+    private ArrayList<Cliente> listaClientes;
 
     public CentroComercial() {
+        listaTiendas = new ArrayList<>();
+        listaClientes = new ArrayList<>();
+    }
 
+    public void entrarCliente(Cliente cliente) {
+        listaClientes.add(cliente);
+    }
+
+    public void salirCliente(Cliente cliente) {
+        listaClientes.remove(cliente);
+    }
+
+    //Metodo usado para darle al cliente un carrito
+    public CarritoCompras getCarrito() {
+        return new CarritoCompras();
+    }
+
+    public ArrayList<Cliente> getClientes() {
+        return this.listaClientes;
+    }
+
+    public ArrayList<Tienda> getTiendas() {
+        return this.listaTiendas;
+    }
+
+    public void pagar(CarritoCompras carrito) {
+        //A considerar implementación
     }
 
 }

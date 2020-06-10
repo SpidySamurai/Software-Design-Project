@@ -5,10 +5,26 @@
  */
 package com.proyecto.controladores;
 
+import com.proyecto.vistas.VistaElectronica;
+
 /**
  *
  * @author Javier
  */
 public class ControladorElectronica {
-    
+
+    private VistaElectronica vElectronica;
+
+    public ControladorElectronica() {
+        this.vElectronica = new VistaElectronica();
+    }
+
+    public void addListener() {
+
+    }
+
+    public void iniciarVista() {
+
+    }
+
 }

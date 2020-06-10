@@ -6,6 +6,7 @@
 package com.proyecto.vistas;
 
 import javax.swing.JButton;
+import javax.swing.JTextField;
 
 /**
  *
@@ -25,7 +26,9 @@ public class VistaInicial extends javax.swing.JFrame {
         return jBIngresar;
     }
     
-    
+    public JTextField getJTNombre(){
+        return jTCliente;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

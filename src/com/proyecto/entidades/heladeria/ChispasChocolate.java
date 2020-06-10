@@ -11,7 +11,7 @@ import com.proyecto.decorator.DecoradorHelado;
  *
  * @author LEFT4
  */
-public class ChispasChocolate extends DecoradorHelado{
+public class ChispasChocolate extends DecoradorHelado {
 
     private double precio = 8;
 
@@ -20,5 +20,4 @@ public class ChispasChocolate extends DecoradorHelado{
         return this.getHelado().precio() + precio;
     }
 
-    
 }
