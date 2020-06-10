@@ -19,4 +19,24 @@ public final class Cliente {
         this.nombreCliente = nombreCliente;
     }
 
+    public void setCarrito(CarritoCompras carrito) {
+        this.carrito = carrito;
+    }
+
+    public void setTiendaActual(Tienda tiendaActual) {
+        this.tiendaActual = tiendaActual;
+    }
+
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public CarritoCompras getCarrito() {
+        return carrito;
+    }
+
+    public Tienda getTiendaActual() {
+        return tiendaActual;
+    }
+
 }
