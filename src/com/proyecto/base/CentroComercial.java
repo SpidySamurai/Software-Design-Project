@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public final class CentroComercial {
 
     private final String NOMBRE_CENTRO_COMERCIAL = "BASH";
-    private ArrayList<Tienda> listaTiendas;
-    private ArrayList<Cliente> listaClientes;
+    private final ArrayList<Tienda> listaTiendas;
+    private final ArrayList<Cliente> listaClientes;
 
     public CentroComercial() {
         listaTiendas = new ArrayList<>();
@@ -31,8 +31,8 @@ public final class CentroComercial {
     }
 
     //Metodo usado para darle al cliente un carrito
-    public CarritoCompras getCarrito() {
-        return new CarritoCompras();
+    public CarritoCompras getCarrito(int capacidad) {
+        return new CarritoCompras(capacidad);
     }
 
     public ArrayList<Cliente> getClientes() {

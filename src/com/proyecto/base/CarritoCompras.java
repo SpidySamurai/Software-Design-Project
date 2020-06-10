@@ -6,7 +6,7 @@
 package com.proyecto.base;
 
 import java.util.ArrayList;
-import java.util.Enumeration;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,10 +15,21 @@ import java.util.Enumeration;
 public final class CarritoCompras {
 
     private ArrayList<Articulo> articulos;
-    private int capacidad; //Numero limite de articulos que se pueden llevar en un carrito
+    private final int capacidad; //Numero limite de articulos que se pueden llevar en un carrito
 
-    public Enumeration articulosCarrito() {
-        return null;
+    public CarritoCompras(int capacidad) {
+        this.capacidad = capacidad;
+    }
 
+    public ArrayList<Articulo> getArticulosCarrito() {
+        return this.articulos;
+    }
+
+    public void añadirAlCarrito(Articulo producto) {
+        if (this.articulos.size() != this.capacidad) {
+            this.articulos.add(producto);
+        } else {
+            JOptionPane.showMessageDialog(null, "Capacidad del carrito excedida");
+        }
     }
 }

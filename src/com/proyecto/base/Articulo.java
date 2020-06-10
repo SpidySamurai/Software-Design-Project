@@ -24,4 +24,20 @@ public class Articulo {
 
     }
 
+    public String getNombreArticulo() {
+        return nombreArticulo;
+    }
+
+    public String getIdArticulo() {
+        return idArticulo;
+    }
+
+    public String getIdTienda() {
+        return idTienda;
+    }
+
+    public double getPrecioArticulo() {
+        return precioArticulo;
+    }
+
 }
