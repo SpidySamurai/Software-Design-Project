@@ -5,22 +5,23 @@
  */
 package com.proyecto.base;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Javier
  */
 public class Articulo {
 
-    private String nombreArticulo;
-    private String idArticulo;
-    private String idTienda;
-    private double precioArticulo;
+    private final String nombreArticulo;
+    private final String idArticulo;
+    private final String idTienda;
+    private final double precioArticulo;
 
-    public Articulo(String nombreArt,String idArt,String indTienda,double precioArt
+    public Articulo(String nombreArt, String idArt, String idTienda, double precioArt) {
         this.nombreArticulo = nombreArt;
+        this.idArticulo = idArt;
+        this.idTienda = idTienda;
+        this.precioArticulo = precioArt;
+
     }
 
-   
 }
