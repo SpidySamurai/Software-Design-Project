@@ -13,7 +13,7 @@ import com.proyecto.base.Articulo;
  */
 public class Tablet extends Articulo{
     
-    public Tablet(String nombreArt, String idArt, String idTienda, double precioArt) {
+    public Tablet() {
         super("Tablet Samsung", "ELECTRO03", "ELEBASH", 6500);
     }
     

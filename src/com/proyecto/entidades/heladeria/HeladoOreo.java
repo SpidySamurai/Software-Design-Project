@@ -14,7 +14,7 @@ import com.proyecto.decorator.IHelado;
  */
 public class HeladoOreo extends Articulo implements IHelado{
 
-    public HeladoOreo(String nombreArt, String idArt, String idTienda, double precioArt) {
+    public HeladoOreo() {
         super("Helado Oreo", "HEL05", "HELBASH", 12.5);
     }
 

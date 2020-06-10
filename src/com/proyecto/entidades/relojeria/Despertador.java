@@ -13,7 +13,7 @@ import com.proyecto.base.Articulo;
  */
 public class Despertador extends Articulo{
     
-    public Despertador(String nombreArt, String idArt, String idTienda, double precioArt) {
+    public Despertador() {
         super("Despertador", "REL02", "RELBASH", 420);
     }
     

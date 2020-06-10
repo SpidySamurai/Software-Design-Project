@@ -13,7 +13,7 @@ import com.proyecto.base.Articulo;
  */
 public class SmartBand extends Articulo{
     
-    public SmartBand(String nombreArt, String idArt, String idTienda, double precioArt) {
+    public SmartBand() {
         super("SmartBand", "ELECTRO01", "ELEBASH", 650);
     }
     

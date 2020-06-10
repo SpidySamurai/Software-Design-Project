@@ -13,7 +13,7 @@ import com.proyecto.base.Articulo;
  */
 public class Cronometro extends Articulo{
     
-    public Cronometro(String nombreArt, String idArt, String idTienda, double precioArt) {
+    public Cronometro() {
         super("Cronometro", "REL03", "RELBASH", 115);
     }
     

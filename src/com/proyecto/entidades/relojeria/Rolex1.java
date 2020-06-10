@@ -13,7 +13,7 @@ import com.proyecto.base.Articulo;
  */
 public class Rolex1 extends Articulo{
     
-    public Rolex1(String nombreArt, String idArt, String idTienda, double precioArt) {
+    public Rolex1() {
         super("Rolex Submariner", "REL04", "RELBASH", 900);
     }
     

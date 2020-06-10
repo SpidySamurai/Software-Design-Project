@@ -13,7 +13,7 @@ import com.proyecto.base.Articulo;
  */
 public class RelojPared extends Articulo{
     
-    public RelojPared(String nombreArt, String idArt, String idTienda, double precioArt) {
+    public RelojPared() {
         super("Reloj de Pared", "REL01", "RELBASH", 240);
     }
     

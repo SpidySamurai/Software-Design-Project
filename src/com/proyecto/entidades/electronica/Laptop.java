@@ -13,7 +13,7 @@ import com.proyecto.base.Articulo;
  */
 public class Laptop extends Articulo{
     
-    public Laptop(String nombreArt, String idArt, String idTienda, double precioArt) {
+    public Laptop() {
         super("Laptop HP", "ELECTRO02", "ELEBASH", 10000);
     }
     
