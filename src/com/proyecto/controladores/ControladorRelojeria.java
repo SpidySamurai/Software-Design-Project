@@ -10,6 +10,8 @@ import com.proyecto.base.Cliente;
 import com.proyecto.vistas.VistaRelojeria;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
 
 /**
@@ -20,15 +22,25 @@ public class ControladorRelojeria implements ActionListener, IWindow {
 
     private VistaRelojeria vRelojeria;
     private final CentroComercial centroComercial;
+    private Cliente clienteActual;
 
     public ControladorRelojeria(Cliente clienteActual, CentroComercial centroComercial) {
         this.vRelojeria = new VistaRelojeria();
 
         this.centroComercial = centroComercial;
+        this.clienteActual = clienteActual;
 
+        addListener();
     }
 
-    public void addListener() {
+    private void addListener() {
+        this.vRelojeria.getjBRolexSubmariner().addActionListener(this);
+        this.vRelojeria.getjBRolexDaytona().addActionListener(this);
+        this.vRelojeria.getjBRelojPared().addActionListener(this);
+        this.vRelojeria.getjBRelojPared().addActionListener(this);
+        this.vRelojeria.getjBCronometro().addActionListener(this);
+        mouseListenerAtras();
+        mouseListenerCarrito();
 
     }
 
@@ -38,13 +50,69 @@ public class ControladorRelojeria implements ActionListener, IWindow {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    private void mouseListenerAtras() {
+        MouseListener mouseListener = new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ControladorRelojeria.this.vRelojeria.dispose();
+                new ControladorCentro(ControladorRelojeria.this.clienteActual, ControladorRelojeria.this.centroComercial).iniciarVista();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                ControladorRelojeria.this.vRelojeria.getjLAtras().setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+            }
+        };
+
+        this.vRelojeria.getjLAtras().addMouseListener(mouseListener);
+    }
+
+    private void mouseListenerCarrito() {
+        MouseListener mouseListener = new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ControladorRelojeria.this.vRelojeria.disable();
+                new ControladorCarrito(ControladorRelojeria.this).iniciarVista();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                ControladorRelojeria.this.vRelojeria.getjLCarrito().setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+            }
+        };
+
+        this.vRelojeria.getjLCarrito().addMouseListener(mouseListener);
+    }
 
     @Override
     public void childClosed(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.vRelojeria.enable();
     }
 
 }

@@ -41,6 +41,7 @@ public class ControladorHeladeria implements ActionListener, IWindow {
         this.vHeladeria.getjBHeladoOreo().addActionListener(this);
         this.vHeladeria.getjBHeladoVainilla().addActionListener(this);
         mouseListenerAtras();
+        mouseListenerCarrito();
 
     }
 
@@ -50,7 +51,6 @@ public class ControladorHeladeria implements ActionListener, IWindow {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public void mouseListenerAtras() {
@@ -82,11 +82,38 @@ public class ControladorHeladeria implements ActionListener, IWindow {
         this.vHeladeria.getjLAtras().addMouseListener(mouseListener);
     }
 
-  
+    public void mouseListenerCarrito() {
+        MouseListener mouseListener = new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ControladorHeladeria.this.vHeladeria.disable();
+                new ControladorCarrito(ControladorHeladeria.this).iniciarVista();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                ControladorHeladeria.this.vHeladeria.getjLCarrito().setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+            }
+        };
+
+        this.vHeladeria.getjLCarrito().addMouseListener(mouseListener);
+    }
 
     @Override
     public void childClosed(WindowEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.vHeladeria.enable();
     }
 
 }

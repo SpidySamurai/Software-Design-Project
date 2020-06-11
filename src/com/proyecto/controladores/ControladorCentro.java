@@ -48,7 +48,7 @@ public class ControladorCentro implements ActionListener, IWindow {
         this.vistaCentro.setVisible(true);
     }
 
-    public void mostrarSaludo(String nombre) {
+    private void mostrarSaludo(String nombre) {
         this.vistaCentro.getjLSaludo().setText("Buen dia " + nombre
                 + "! Bienvenido al Centro Comercial!");
 //        this.vistaCentro.getjLSaludo().updateUI();
@@ -70,7 +70,7 @@ public class ControladorCentro implements ActionListener, IWindow {
         }
     }
 
-    public void mouseListenerCarrito() {
+    private void mouseListenerCarrito() {
         MouseListener mouseListener = new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -102,7 +102,7 @@ public class ControladorCentro implements ActionListener, IWindow {
 
     }
 
-    public void mouseListenerAtras() {
+    private void mouseListenerAtras() {
         MouseListener mouseListener = new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {

@@ -69,7 +69,6 @@ public class VistaElectronica extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jBCelular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/E1.png"))); // NOI18N
-        jBCelular.setBorder(null);
         jPanel1.add(jBCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 316, 180));
 
         jBSmartBand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/E3.png"))); // NOI18N
