@@ -12,7 +12,7 @@ import com.proyecto.decorator.IHelado;
  *
  * @author LEFT4
  */
-public class HeladoFresa extends Articulo implements IHelado{
+public class HeladoFresa extends Articulo implements IHelado {
 
     public HeladoFresa() {
         super("Helado Fresa", "HEL04", "HELBASH", 10);
@@ -22,5 +22,5 @@ public class HeladoFresa extends Articulo implements IHelado{
     public double precio() {
         return 10;
     }
-    
+
 }

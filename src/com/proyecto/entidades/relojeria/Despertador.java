@@ -14,7 +14,8 @@ import com.proyecto.base.Articulo;
 public class Despertador extends Articulo{
     
     public Despertador() {
+
         super("Despertador", "REL02", "RELBASH", 420);
     }
-    
+
 }

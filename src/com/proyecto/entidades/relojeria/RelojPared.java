@@ -14,7 +14,8 @@ import com.proyecto.base.Articulo;
 public class RelojPared extends Articulo{
     
     public RelojPared() {
+
         super("Reloj de Pared", "REL01", "RELBASH", 240);
     }
-    
+
 }

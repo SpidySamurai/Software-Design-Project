@@ -14,7 +14,8 @@ import com.proyecto.base.Articulo;
 public class SmartBand extends Articulo{
     
     public SmartBand() {
+
         super("SmartBand", "ELECTRO01", "ELEBASH", 650);
     }
-    
+
 }

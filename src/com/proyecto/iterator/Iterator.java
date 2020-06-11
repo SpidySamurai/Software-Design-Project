@@ -11,7 +11,7 @@ package com.proyecto.iterator;
  */
 public interface Iterator {
 
-    public String siguiente();
+    public Object siguiente();
 
     boolean contieneSiguiente();
 

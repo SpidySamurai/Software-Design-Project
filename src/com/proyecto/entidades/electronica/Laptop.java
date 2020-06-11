@@ -14,7 +14,8 @@ import com.proyecto.base.Articulo;
 public class Laptop extends Articulo{
     
     public Laptop() {
+
         super("Laptop HP", "ELECTRO02", "ELEBASH", 10000);
     }
-    
+
 }

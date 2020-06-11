@@ -14,7 +14,8 @@ import com.proyecto.base.Articulo;
 public class Celular extends Articulo{
     
     public Celular() {
+
         super("Celular", "ELECTRO05", "ELEBASH", 7800);
     }
-    
+
 }

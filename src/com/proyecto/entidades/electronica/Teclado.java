@@ -14,7 +14,8 @@ import com.proyecto.base.Articulo;
 public class Teclado extends Articulo{
     
     public Teclado() {
+
         super("Teclado PC", "ELECTRO04", "ELEBASH", 1000);
     }
-    
+
 }

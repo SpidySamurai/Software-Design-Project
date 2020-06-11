@@ -14,7 +14,8 @@ import com.proyecto.base.Articulo;
 public class Cronometro extends Articulo{
     
     public Cronometro() {
+
         super("Cronometro", "REL03", "RELBASH", 115);
     }
-    
+
 }

@@ -14,7 +14,8 @@ import com.proyecto.base.Articulo;
 public class Rolex2 extends Articulo{
     
     public Rolex2() {
+
         super("Rolex Daytona", "REL05", "RELBASH", 3000);
     }
-    
+
 }

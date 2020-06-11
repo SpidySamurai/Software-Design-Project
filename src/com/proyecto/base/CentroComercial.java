@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public final class CentroComercial {
 
-    private final String NOMBRE_CENTRO_COMERCIAL = "BASH";
+    private final String nombreCentro = "BASH";
     private final ArrayList<Tienda> listaTiendas;
     private final ArrayList<Cliente> listaClientes;
 
@@ -45,6 +45,18 @@ public final class CentroComercial {
 
     public void pagar(CarritoCompras carrito) {
         //A considerar implementación
+    }
+
+    public String getNombreCentro() {
+        return nombreCentro;
+    }
+
+    public ArrayList<Tienda> getListaTiendas() {
+        return listaTiendas;
+    }
+
+    public ArrayList<Cliente> getListaClientes() {
+        return listaClientes;
     }
 
 }

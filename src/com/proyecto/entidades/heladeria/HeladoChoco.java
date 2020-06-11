@@ -17,10 +17,11 @@ public class HeladoChoco extends Articulo implements IHelado {
 //    private String idArt = "HEL01";
 //    private String idTienda = "HELBASH";
 //    private double precioArticulo = precio();
- 
-    public HeladoChoco(String nombreArt, String idArt, String idTienda, double precioArticulo){
+
+    public HeladoChoco(String nombreArt, String idArt, String idTienda, double precioArticulo) {
         super("Helado Chocolate", "HEL01", "HELBASH", 9.5);
     }
+
     @Override
     public double precio() {
         return 9.5;

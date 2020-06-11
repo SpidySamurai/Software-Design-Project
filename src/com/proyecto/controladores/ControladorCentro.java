@@ -23,8 +23,7 @@ public class ControladorCentro implements ActionListener {
     public ControladorCentro(Cliente cliente) {
         centroComercial = new CentroComercial();
         centroComercial.entrarCliente(cliente);
-        
-        
+
         this.vistaCentro = new VistaCentro();
         this.addListener();
 

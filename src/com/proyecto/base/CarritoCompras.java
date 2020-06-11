@@ -5,8 +5,9 @@
  */
 package com.proyecto.base;
 
+import com.proyecto.state.EstadoVacio;
+import com.proyecto.state.IEstado;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,8 +18,12 @@ public final class CarritoCompras {
     private ArrayList<Articulo> articulos;
     private final int capacidad; //Numero limite de articulos que se pueden llevar en un carrito
 
+    //Implementación de state
+    IEstado estadoActual;
+
     public CarritoCompras(int capacidad) {
         this.capacidad = capacidad;
+        this.estadoActual = new EstadoVacio();
     }
 
     public ArrayList<Articulo> getArticulosCarrito() {
@@ -26,10 +31,19 @@ public final class CarritoCompras {
     }
 
     public void añadirAlCarrito(Articulo producto) {
-        if (this.articulos.size() != this.capacidad) {
-            this.articulos.add(producto);
-        } else {
-            JOptionPane.showMessageDialog(null, "Capacidad del carrito excedida");
-        }
+        this.estadoActual.añadirAlCarrito(producto, this);
     }
+
+    public void quitarDelCarrito(Articulo producto) {
+        this.estadoActual.quitarDelCarrito(producto, this);
+    }
+    
+    public int getCapacidad(){
+        return this.capacidad;
+    }
+    
+    public void setEstadoActual(IEstado estadoActual) {
+        this.estadoActual = estadoActual;
+    }
+
 }
