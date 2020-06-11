@@ -1,5 +1,8 @@
 package com.proyecto.vistas;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Javier
@@ -14,6 +17,34 @@ public class VistaHeladeria extends javax.swing.JFrame {
         setLocationRelativeTo(this);
     }
 
+    public JButton getjBHeladoChocolate() {
+        return jBHeladoChocolate;
+    }
+
+    public JButton getjBHeladoCombinado() {
+        return jBHeladoCombinado;
+    }
+
+    public JButton getjBHeladoFresa() {
+        return jBHeladoFresa;
+    }
+
+    public JButton getjBHeladoOreo() {
+        return jBHeladoOreo;
+    }
+
+    public JButton getjBHeladoVainilla() {
+        return jBHeladoVainilla;
+    }
+
+    public JLabel getjLAtras() {
+        return jLAtras;
+    }
+
+    public JLabel getjLCarrito() {
+        return jLCarrito;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -24,32 +55,38 @@ public class VistaHeladeria extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jBHeladoChocolate = new javax.swing.JButton();
+        jBHeladoFresa = new javax.swing.JButton();
+        jBHeladoCombinado = new javax.swing.JButton();
+        jBHeladoVainilla = new javax.swing.JButton();
+        jBHeladoOreo = new javax.swing.JButton();
+        jLCarrito = new javax.swing.JLabel();
+        jLAtras = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoCentro.png"))); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Fondo)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Fondo)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jBHeladoChocolate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H1.png"))); // NOI18N
+        jPanel1.add(jBHeladoChocolate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 317, 179));
+
+        jBHeladoFresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H3.png"))); // NOI18N
+        jPanel1.add(jBHeladoFresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 256, 103));
+
+        jBHeladoCombinado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H2.png"))); // NOI18N
+        jPanel1.add(jBHeladoCombinado, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 317, 171));
+
+        jBHeladoVainilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H5.png"))); // NOI18N
+        jPanel1.add(jBHeladoVainilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 334, 257, 107));
+
+        jBHeladoOreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H4.png"))); // NOI18N
+        jPanel1.add(jBHeladoOreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 256, 129));
+        jPanel1.add(jLCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 8, 50, 50));
+        jPanel1.add(jLAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 8, 50, 50));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/Fondo Heladería.png"))); // NOI18N
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,6 +139,13 @@ public class VistaHeladeria extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
+    private javax.swing.JButton jBHeladoChocolate;
+    private javax.swing.JButton jBHeladoCombinado;
+    private javax.swing.JButton jBHeladoFresa;
+    private javax.swing.JButton jBHeladoOreo;
+    private javax.swing.JButton jBHeladoVainilla;
+    private javax.swing.JLabel jLAtras;
+    private javax.swing.JLabel jLCarrito;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

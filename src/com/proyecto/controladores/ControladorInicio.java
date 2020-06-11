@@ -1,5 +1,6 @@
 package com.proyecto.controladores;
 
+import com.proyecto.base.CentroComercial;
 import com.proyecto.vistas.VistaInicial;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +14,11 @@ public class ControladorInicio implements ActionListener {
 
     private VistaInicial vInicial;
 
-    public ControladorInicio() {
+    private final CentroComercial centroComercial;
+
+    public ControladorInicio(CentroComercial centroComercial) {
+        this.centroComercial = centroComercial;
+
         this.vInicial = new VistaInicial();
         this.addListener();
 
@@ -33,8 +38,11 @@ public class ControladorInicio implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (this.vInicial.getjBIngresar() == e.getSource()) {
             this.vInicial.dispose();
+
             String nombre = this.vInicial.getJTNombre().getText();
-            new ControladorCentro(new Cliente(nombre)).iniciarVista();
+            Cliente cliente = new Cliente(nombre);
+            centroComercial.entrarCliente(cliente);
+            new ControladorCentro(cliente, this.centroComercial).iniciarVista();
         }
 
     }

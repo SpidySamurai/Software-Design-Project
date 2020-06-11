@@ -1,5 +1,6 @@
 package com.proyecto.demo;
 
+import com.proyecto.base.CentroComercial;
 import com.proyecto.controladores.ControladorInicio;
 
 /**
@@ -12,8 +13,10 @@ public class demo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ControladorInicio controladorInicio = new ControladorInicio();
-        controladorInicio.iniciarVista();
+
+        CentroComercial centroComercial = new CentroComercial();
+
+        new ControladorInicio(centroComercial).iniciarVista();
     }
 
 }

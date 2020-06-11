@@ -17,8 +17,16 @@ public class VistaCentro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
-    public JButton getBtn_Carrito() {
-        return btn_Carrito;
+    public JLabel getjLSaludo() {
+        return jLSaludo;
+    }
+
+    public JLabel getjLAtras() {
+        return jLAtras;
+    }
+
+    public JLabel getjLCarrito() {
+        return jLCarrito;
     }
 
     public JButton getBtn_Electronica() {
@@ -34,7 +42,7 @@ public class VistaCentro extends javax.swing.JFrame {
     }
 
     public JLabel getMsjBienvenida() {
-        return msjBienvenida;
+        return jLSaludo;
     }
 
     /**
@@ -47,24 +55,22 @@ public class VistaCentro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        msjBienvenida = new javax.swing.JLabel();
-        btn_Carrito = new javax.swing.JButton();
+        jLSaludo = new javax.swing.JLabel();
         btn_Heladeria = new javax.swing.JButton();
         btn_Electronica = new javax.swing.JButton();
         btn_Relojeria = new javax.swing.JButton();
+        jLCarrito = new javax.swing.JLabel();
+        jLAtras = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        msjBienvenida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        msjBienvenida.setForeground(new java.awt.Color(255, 255, 255));
-        msjBienvenida.setText("Buen dia (nombre)! Bienvenido al Centro Comercial!");
-        jPanel1.add(msjBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 30));
-
-        btn_Carrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/carro-de-la-compra (1).png"))); // NOI18N
-        jPanel1.add(btn_Carrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 50, 40));
+        jLSaludo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLSaludo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLSaludo.setText("Buen dia (nombre)! Bienvenido al Centro Comercial!");
+        jPanel1.add(jLSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 480, 30));
 
         btn_Heladeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/HeladeriaLOGO.png"))); // NOI18N
         jPanel1.add(btn_Heladeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 200, 380));
@@ -74,6 +80,15 @@ public class VistaCentro extends javax.swing.JFrame {
 
         btn_Relojeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/RelojeriaLOGO.png"))); // NOI18N
         jPanel1.add(btn_Relojeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 430, 180));
+
+        jLCarrito.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/carrito.png"))); // NOI18N
+        jPanel1.add(jLCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 5, 50, 50));
+
+        jLAtras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/icons8_undo_50px_1.png"))); // NOI18N
+        jLAtras.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel1.add(jLAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 50, 50));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/FondoCentro.png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 450));
@@ -133,11 +148,12 @@ public class VistaCentro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
-    private javax.swing.JButton btn_Carrito;
     private javax.swing.JButton btn_Electronica;
     private javax.swing.JButton btn_Heladeria;
     private javax.swing.JButton btn_Relojeria;
+    private javax.swing.JLabel jLAtras;
+    private javax.swing.JLabel jLCarrito;
+    private javax.swing.JLabel jLSaludo;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel msjBienvenida;
     // End of variables declaration//GEN-END:variables
 }
