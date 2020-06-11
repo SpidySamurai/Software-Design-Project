@@ -5,8 +5,6 @@
  */
 package com.proyecto.base;
 
-
-
 import com.proyecto.singleton.Singleton;
 import java.util.ArrayList;
 
@@ -14,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author Javier
  */
-public abstract class Tienda implements Singleton{
+public abstract class Tienda implements Singleton {
 
     private final String nombreTienda;
     private final String idTienda;
@@ -32,10 +30,9 @@ public abstract class Tienda implements Singleton{
 
     public abstract void salirCliente(Cliente cliente);
 
-    public abstract ArrayList<Cliente> getClientesTienda();
-
-    public abstract ArrayList<Articulo> getArticulosTienda();
-
+//    public abstract ArrayList<Cliente> getClientesTienda();
+//
+//    public abstract ArrayList<Articulo> getArticulosTienda();
     public abstract void añadirAlCarrito(CarritoCompras carritoCompras, Articulo producto);
 
     public abstract void eliminarDelCarrito(CarritoCompras carritoCompras, Articulo producto);
@@ -44,6 +41,14 @@ public abstract class Tienda implements Singleton{
 
     public abstract void crearPaquete(ArrayList<Articulo> productos, double descuento);
 
+    public ArrayList<Articulo> getArticulosTienda() {
+        return articulosTienda;
+    }
+
+    public ArrayList<Cliente> getClientesTienda() {
+        return clientesTienda;
+    }
+
     public String getNombreTienda() {
         return nombreTienda;
     }
@@ -51,6 +56,5 @@ public abstract class Tienda implements Singleton{
     public String getIdTienda() {
         return idTienda;
     }
-
 
 }
