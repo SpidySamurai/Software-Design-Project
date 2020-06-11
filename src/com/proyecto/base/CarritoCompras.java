@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.proyecto.base;
 
 import com.proyecto.state.EstadoVacio;
@@ -37,11 +32,11 @@ public final class CarritoCompras {
     public void quitarDelCarrito(Articulo producto) {
         this.estadoActual.quitarDelCarrito(producto, this);
     }
-    
-    public int getCapacidad(){
+
+    public int getCapacidad() {
         return this.capacidad;
     }
-    
+
     public void setEstadoActual(IEstado estadoActual) {
         this.estadoActual = estadoActual;
     }

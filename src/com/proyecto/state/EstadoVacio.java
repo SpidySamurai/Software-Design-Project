@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.proyecto.state;
 
 import com.proyecto.base.Articulo;
@@ -25,7 +20,5 @@ public class EstadoVacio implements IEstado {
     public void quitarDelCarrito(Articulo producto, CarritoCompras carritoCompras) {
         JOptionPane.showMessageDialog(null, "El carrito esta vacío.");
     }
-
-   
 
 }
