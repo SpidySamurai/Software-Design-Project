@@ -11,10 +11,10 @@ import com.proyecto.base.Articulo;
  *
  * @author LEFT4
  */
-public class Rolex1 extends Articulo{
-    
+public class Rolex1 extends Articulo {
+
     public Rolex1(String nombreArt, String idArt, String idTienda, double precioArt) {
         super("Rolex Submariner", "REL04", "RELBASH", 900);
     }
-    
+
 }

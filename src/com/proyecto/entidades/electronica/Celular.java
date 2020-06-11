@@ -11,10 +11,10 @@ import com.proyecto.base.Articulo;
  *
  * @author LEFT4
  */
-public class Celular extends Articulo{
-    
+public class Celular extends Articulo {
+
     public Celular(String nombreArt, String idArt, String idTienda, double precioArt) {
         super("Celular", "ELECTRO05", "ELEBASH", 7800);
     }
-    
+
 }

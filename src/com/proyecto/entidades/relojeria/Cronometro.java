@@ -11,10 +11,10 @@ import com.proyecto.base.Articulo;
  *
  * @author LEFT4
  */
-public class Cronometro extends Articulo{
-    
+public class Cronometro extends Articulo {
+
     public Cronometro(String nombreArt, String idArt, String idTienda, double precioArt) {
         super("Cronometro", "REL03", "RELBASH", 115);
     }
-    
+
 }

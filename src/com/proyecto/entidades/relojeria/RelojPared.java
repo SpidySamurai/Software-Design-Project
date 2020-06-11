@@ -11,10 +11,10 @@ import com.proyecto.base.Articulo;
  *
  * @author LEFT4
  */
-public class RelojPared extends Articulo{
-    
+public class RelojPared extends Articulo {
+
     public RelojPared(String nombreArt, String idArt, String idTienda, double precioArt) {
         super("Reloj de Pared", "REL01", "RELBASH", 240);
     }
-    
+
 }

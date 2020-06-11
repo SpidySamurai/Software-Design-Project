@@ -11,10 +11,10 @@ import com.proyecto.base.Articulo;
  *
  * @author LEFT4
  */
-public class Teclado extends Articulo{
-    
+public class Teclado extends Articulo {
+
     public Teclado(String nombreArt, String idArt, String idTienda, double precioArt) {
         super("Teclado PC", "ELECTRO04", "ELEBASH", 1000);
     }
-    
+
 }

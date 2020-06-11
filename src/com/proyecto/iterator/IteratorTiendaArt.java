@@ -12,13 +12,15 @@ import com.proyecto.base.Tienda;
  *
  * @author Javier
  */
-public class IteratorTiendaArt implements Iterator{
+public class IteratorTiendaArt implements Iterator {
+
     private final Tienda tienda;
     private int posicion;
-    
-    public IteratorTiendaArt(Tienda tienda){
+
+    public IteratorTiendaArt(Tienda tienda) {
         this.tienda = tienda;
     }
+
     @Override
     public Articulo siguiente() {
         return this.tienda.getArticulosTienda().get(posicion++);
@@ -28,6 +30,5 @@ public class IteratorTiendaArt implements Iterator{
     public boolean contieneSiguiente() {
         return this.posicion < this.tienda.getArticulosTienda().size();
     }
-    
-    
+
 }

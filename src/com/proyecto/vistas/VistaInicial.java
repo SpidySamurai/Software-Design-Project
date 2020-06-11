@@ -25,8 +25,8 @@ public class VistaInicial extends javax.swing.JFrame {
     public JButton getjBIngresar() {
         return jBIngresar;
     }
-    
-    public JTextField getJTNombre(){
+
+    public JTextField getJTNombre() {
         return jTCliente;
     }
 

@@ -11,10 +11,10 @@ import com.proyecto.base.Articulo;
  *
  * @author LEFT4
  */
-public class SmartBand extends Articulo{
-    
+public class SmartBand extends Articulo {
+
     public SmartBand(String nombreArt, String idArt, String idTienda, double precioArt) {
         super("SmartBand", "ELECTRO01", "ELEBASH", 650);
     }
-    
+
 }
