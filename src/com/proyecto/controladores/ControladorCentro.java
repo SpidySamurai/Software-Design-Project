@@ -41,6 +41,7 @@ public class ControladorCentro implements ActionListener, IWindow {
         this.vistaCentro.getBtn_Electronica().addActionListener(this);
         this.mouseListenerCarrito();
         this.mouseListenerAtras();
+        this.mouseListenerUsuarios();
 
     }
 
@@ -49,8 +50,8 @@ public class ControladorCentro implements ActionListener, IWindow {
     }
 
     private void mostrarSaludo(String nombre) {
-        this.vistaCentro.getjLSaludo().setText("Buen dia " + nombre
-                + "! Bienvenido al Centro Comercial!");
+        this.vistaCentro.getjLSaludo().setText("Buen día " + nombre
+                + ", Bienvenido al centro comercial Bash!");
 //        this.vistaCentro.getjLSaludo().updateUI();
     }
 
@@ -130,6 +131,37 @@ public class ControladorCentro implements ActionListener, IWindow {
         };
 
         this.vistaCentro.getjLAtras().addMouseListener(mouseListener);
+    }
+
+    private void mouseListenerUsuarios() {
+        MouseListener mouseListener = new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                ControladorCentro.this.vistaCentro.disable();
+                new ControladorListaUsuarios(ControladorCentro.this).iniciarVista();
+
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                ControladorCentro.this.vistaCentro.getjLListaClientes().setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+            }
+        };
+
+        this.vistaCentro.getjLListaClientes().addMouseListener(mouseListener);
     }
 
     @Override

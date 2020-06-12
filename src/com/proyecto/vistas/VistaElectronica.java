@@ -14,7 +14,7 @@ public class VistaElectronica extends javax.swing.JFrame {
      */
     public VistaElectronica() {
         initComponents();
-        setLocationRelativeTo(this);
+        setLocationRelativeTo(null);
     }
 
     public JButton getjBCelular() {
@@ -65,6 +65,7 @@ public class VistaElectronica extends javax.swing.JFrame {
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
