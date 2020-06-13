@@ -12,7 +12,9 @@ public final class CentroComercial {
     private final ArrayList<Tienda> listaTiendas;
     private final ArrayList<Cliente> listaClientes;
 
-    public CentroComercial() {
+    private static CentroComercial centroComercial;
+
+    private CentroComercial() {
         listaTiendas = new ArrayList<>();
         listaClientes = new ArrayList<>();
     }
@@ -42,6 +44,10 @@ public final class CentroComercial {
         //A considerar implementación
     }
 
+    public void añadirTienda(Tienda tienda) {
+        this.listaTiendas.add(tienda);
+    }
+
     public String getNombreCentro() {
         return nombreCentro;
     }
@@ -52,6 +58,14 @@ public final class CentroComercial {
 
     public ArrayList<Cliente> getListaClientes() {
         return listaClientes;
+    }
+
+    public static CentroComercial getInstance() {
+        if (centroComercial == null) {
+            centroComercial = new CentroComercial();
+            return centroComercial;
+        }
+        return centroComercial;
     }
 
 }

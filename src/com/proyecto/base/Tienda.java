@@ -21,20 +21,32 @@ public abstract class Tienda implements Singleton {
         this.idTienda = idTienda;
     }
 
-    public abstract void entrarCliente(Cliente cliente);
+    public void entrarCliente(Cliente cliente) {
+        this.clientesTienda.add(cliente);
+    }
 
-    public abstract void salirCliente(Cliente cliente);
+    public void salirCliente(Cliente cliente) {
+        this.clientesTienda.remove(cliente);
 
-//    public abstract ArrayList<Cliente> getClientesTienda();
-//
-//    public abstract ArrayList<Articulo> getArticulosTienda();
-    public abstract void añadirAlCarrito(CarritoCompras carritoCompras, Articulo producto);
+    }
 
-    public abstract void eliminarDelCarrito(CarritoCompras carritoCompras, Articulo producto);
+    public void añadirAlCarrito(CarritoCompras carritoCompras, Articulo producto) {
+        carritoCompras.añadirAlCarrito(producto);
 
-    public abstract void añadirProductoTienda(Articulo producto);
+    }
 
-    public abstract void crearPaquete(ArrayList<Articulo> productos, double descuento);
+    public void eliminarDelCarrito(CarritoCompras carritoCompras, Articulo producto) {
+        carritoCompras.quitarDelCarrito(producto);
+    }
+
+    public void añadirProductoTienda(Articulo producto) {
+        this.articulosTienda.add(producto);
+
+    }
+
+    public void crearPaquete(ArrayList<Articulo> productos, double descuento) {
+
+    }
 
     public ArrayList<Articulo> getArticulosTienda() {
         return articulosTienda;
@@ -50,6 +62,11 @@ public abstract class Tienda implements Singleton {
 
     public String getIdTienda() {
         return idTienda;
+    }
+
+    @Override
+    public String toString() {
+        return this.getNombreTienda();
     }
 
 }

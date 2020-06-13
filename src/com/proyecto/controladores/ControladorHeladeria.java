@@ -18,9 +18,9 @@ import java.awt.event.WindowEvent;
  *
  * @author Javier
  */
-public class ControladorHeladeria implements ActionListener, IWindow {
+public final class ControladorHeladeria implements ActionListener, IWindow {
 
-    private VistaHeladeria vHeladeria;
+    private final VistaHeladeria vHeladeria;
 
     private final CentroComercial centroComercial;
     private final Cliente clienteActual;

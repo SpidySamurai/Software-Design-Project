@@ -23,7 +23,7 @@ public class IteratorCentroComercialTienda implements Iterator {
 
     @Override
     public boolean contieneSiguiente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.centroComercial.getTiendas().size() > posicion;
     }
 
 }

@@ -15,11 +15,11 @@ import java.awt.event.WindowListener;
  *
  * @author Javier
  */
-public class ControladorCarrito implements ActionListener {
+public final class ControladorCarrito implements ActionListener {
 
     private final IWindow ventanaPadre;
 
-    private VistaCarrito vCarrito;
+    private final VistaCarrito vCarrito;
 
     public ControladorCarrito(IWindow ventanaPadre) {
         this.ventanaPadre = ventanaPadre;

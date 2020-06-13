@@ -18,12 +18,12 @@ import java.awt.event.WindowEvent;
  *
  * @author Javier
  */
-public class ControladorElectronica implements ActionListener, IWindow {
+public final class ControladorElectronica implements ActionListener, IWindow {
 
-    private VistaElectronica vElectronica;
+    private final VistaElectronica vElectronica;
 
     private final CentroComercial centroComercial;
-    private Cliente clienteActual;
+    private final Cliente clienteActual;
 
     public ControladorElectronica(Cliente clienteActual, CentroComercial centroComercial) {
         this.vElectronica = new VistaElectronica();

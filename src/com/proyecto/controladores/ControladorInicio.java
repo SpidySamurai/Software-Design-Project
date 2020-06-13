@@ -10,14 +10,13 @@ import com.proyecto.base.Cliente;
  *
  * @author Javier
  */
-public class ControladorInicio implements ActionListener {
+public final class ControladorInicio implements ActionListener {
 
-    private VistaInicial vInicial;
-
+    private final VistaInicial vInicial;
     private final CentroComercial centroComercial;
 
-    public ControladorInicio(CentroComercial centroComercial) {
-        this.centroComercial = centroComercial;
+    public ControladorInicio() {
+        this.centroComercial = CentroComercial.getInstance();
 
         this.vInicial = new VistaInicial();
         this.addListener();

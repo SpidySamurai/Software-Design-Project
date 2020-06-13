@@ -34,4 +34,9 @@ public final class Cliente {
         return tiendaActual;
     }
 
+    @Override
+    public String toString() {
+        return this.getNombreCliente();
+    }
+
 }

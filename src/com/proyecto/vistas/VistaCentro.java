@@ -48,8 +48,6 @@ public class VistaCentro extends javax.swing.JFrame {
     public JLabel getjLListaClientes() {
         return jLListaClientes;
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.

@@ -18,9 +18,9 @@ import java.awt.event.WindowEvent;
  *
  * @author Javier
  */
-public class ControladorCentro implements ActionListener, IWindow {
+public final class ControladorCentro implements ActionListener, IWindow {
 
-    private VistaCentro vistaCentro;
+    private final VistaCentro vistaCentro;
 
     private final CentroComercial centroComercial;
     private final Cliente clienteActual;
@@ -109,7 +109,7 @@ public class ControladorCentro implements ActionListener, IWindow {
             public void mouseClicked(MouseEvent e) {
                 ControladorCentro.this.centroComercial.salirCliente(ControladorCentro.this.clienteActual);
                 ControladorCentro.this.vistaCentro.dispose();
-                new ControladorInicio(centroComercial).iniciarVista();
+                new ControladorInicio().iniciarVista();
             }
 
             @Override
