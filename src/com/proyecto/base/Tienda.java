@@ -1,58 +1,72 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.proyecto.base;
 
-import com.proyecto.abstractfactory.FactoryTienda;
+import com.proyecto.singleton.Singleton;
 import java.util.ArrayList;
-import java.util.Enumeration;
 
 /**
  *
  * @author Javier
  */
-public class Tienda implements FactoryTienda {
+public abstract class Tienda implements Singleton {
 
-    private String nombreTienda;
-    private String idTienda;
-    private ArrayList<Articulo> articulos;
-    private ArrayList<Cliente> clientes;
+    private final String nombreTienda;
+    private final String idTienda;
+    private final ArrayList<Articulo> articulosTienda;
+    private final ArrayList<Cliente> clientesTienda;
 
-    @Override
-    public void entrar() {
+    protected Tienda(String nombreTienda, String idTienda) {
+        articulosTienda = new ArrayList<>();
+        clientesTienda = new ArrayList<>();
+        this.nombreTienda = nombreTienda;
+        this.idTienda = idTienda;
+    }
 
+    public void entrarCliente(Cliente cliente) {
+        this.clientesTienda.add(cliente);
+    }
+
+    public void salirCliente(Cliente cliente) {
+        this.clientesTienda.remove(cliente);
+
+    }
+
+    public void añadirAlCarrito(CarritoCompras carritoCompras, Articulo producto) {
+        carritoCompras.añadirAlCarrito(producto);
+
+    }
+
+    public void eliminarDelCarrito(CarritoCompras carritoCompras, Articulo producto) {
+        carritoCompras.quitarDelCarrito(producto);
+    }
+
+    public void añadirProductoTienda(Articulo producto) {
+        this.articulosTienda.add(producto);
+
+    }
+
+    public void crearPaquete(ArrayList<Articulo> productos, double descuento) {
+
+    }
+
+    public ArrayList<Articulo> getArticulosTienda() {
+        return articulosTienda;
+    }
+
+    public ArrayList<Cliente> getClientesTienda() {
+        return clientesTienda;
+    }
+
+    public String getNombreTienda() {
+        return nombreTienda;
+    }
+
+    public String getIdTienda() {
+        return idTienda;
     }
 
     @Override
-    public void salir() {
-
+    public String toString() {
+        return this.getNombreTienda();
     }
 
-    public Enumeration clientesTienda() {
-        return null;
-
-    }
-
-    public Enumeration articulosTienda() {
-        return null;
-
-    }
-
-    public void addACarrito(CarritodeCompras cdc, Articulo art) {
-
-    }
-
-    public void ElimDeCarrito(CarritodeCompras cdc, Articulo art) {
-
-    }
-
-    public void addArticulo(Articulo art) {
-
-    }
-
-//    public void crearPaquete(ArrayList articulos, descuento){
-//        METODO POR ACLARAR QUE RECIBIRA EXACTAMENTE
-//    }
 }

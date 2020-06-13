@@ -1,17 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.proyecto.base;
 
 /**
  *
  * @author Javier
  */
-class Cliente {
+public final class Cliente {
 
-    private String nombreCliente;
-    private CarritodeCompras carrito;
+    private final String nombreCliente;
+    private CarritoCompras carrito;
     private Tienda tiendaActual;
+
+    public Cliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
+    public void setCarrito(CarritoCompras carrito) {
+        this.carrito = carrito;
+    }
+
+    public void setTiendaActual(Tienda tiendaActual) {
+        this.tiendaActual = tiendaActual;
+    }
+
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public CarritoCompras getCarrito() {
+        return carrito;
+    }
+
+    public Tienda getTiendaActual() {
+        return tiendaActual;
+    }
+
+    @Override
+    public String toString() {
+        return this.getNombreCliente();
+    }
+
 }

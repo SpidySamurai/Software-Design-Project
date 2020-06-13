@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.proyecto.vistas;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -16,6 +14,35 @@ public class VistaElectronica extends javax.swing.JFrame {
      */
     public VistaElectronica() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+
+    public JButton getjBCelular() {
+        return jBCelular;
+    }
+
+    public JButton getjBLaptop() {
+        return jBLaptop;
+    }
+
+    public JButton getjBSmartBand() {
+        return jBSmartBand;
+    }
+
+    public JButton getjBTablet() {
+        return jBTablet;
+    }
+
+    public JButton getjBTeclado() {
+        return jBTeclado;
+    }
+
+    public JLabel getjLAtras() {
+        return jLAtras;
+    }
+
+    public JLabel getjLCarrito() {
+        return jLCarrito;
     }
 
     /**
@@ -27,17 +54,50 @@ public class VistaElectronica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jBCelular = new javax.swing.JButton();
+        jBSmartBand = new javax.swing.JButton();
+        jBLaptop = new javax.swing.JButton();
+        jBTablet = new javax.swing.JButton();
+        jBTeclado = new javax.swing.JButton();
+        jLCarrito = new javax.swing.JLabel();
+        jLAtras = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jBCelular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/E1.png"))); // NOI18N
+        jPanel1.add(jBCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 316, 180));
+
+        jBSmartBand.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/E3.png"))); // NOI18N
+        jPanel1.add(jBSmartBand, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 256, 101));
+
+        jBLaptop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/E2.png"))); // NOI18N
+        jPanel1.add(jBLaptop, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 316, 169));
+
+        jBTablet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/E5.png"))); // NOI18N
+        jPanel1.add(jBTablet, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 333, 256, 106));
+
+        jBTeclado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/E4.png"))); // NOI18N
+        jPanel1.add(jBTeclado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 256, 128));
+        jPanel1.add(jLCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 8, 50, 50));
+        jPanel1.add(jLAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 8, 50, 50));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/Fondo Electrónica.png"))); // NOI18N
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +139,14 @@ public class VistaElectronica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JButton jBCelular;
+    private javax.swing.JButton jBLaptop;
+    private javax.swing.JButton jBSmartBand;
+    private javax.swing.JButton jBTablet;
+    private javax.swing.JButton jBTeclado;
+    private javax.swing.JLabel jLAtras;
+    private javax.swing.JLabel jLCarrito;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.proyecto.vistas;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -16,6 +14,35 @@ public class VistaHeladeria extends javax.swing.JFrame {
      */
     public VistaHeladeria() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+
+    public JButton getjBHeladoChocolate() {
+        return jBHeladoChocolate;
+    }
+
+    public JButton getjBHeladoCombinado() {
+        return jBHeladoCombinado;
+    }
+
+    public JButton getjBHeladoFresa() {
+        return jBHeladoFresa;
+    }
+
+    public JButton getjBHeladoOreo() {
+        return jBHeladoOreo;
+    }
+
+    public JButton getjBHeladoVainilla() {
+        return jBHeladoVainilla;
+    }
+
+    public JLabel getjLAtras() {
+        return jLAtras;
+    }
+
+    public JLabel getjLCarrito() {
+        return jLCarrito;
     }
 
     /**
@@ -27,17 +54,50 @@ public class VistaHeladeria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jBHeladoChocolate = new javax.swing.JButton();
+        jBHeladoFresa = new javax.swing.JButton();
+        jBHeladoCombinado = new javax.swing.JButton();
+        jBHeladoVainilla = new javax.swing.JButton();
+        jBHeladoOreo = new javax.swing.JButton();
+        jLCarrito = new javax.swing.JLabel();
+        jLAtras = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jBHeladoChocolate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H1.png"))); // NOI18N
+        jPanel1.add(jBHeladoChocolate, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 317, 179));
+
+        jBHeladoFresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H3.png"))); // NOI18N
+        jPanel1.add(jBHeladoFresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 256, 103));
+
+        jBHeladoCombinado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H2.png"))); // NOI18N
+        jPanel1.add(jBHeladoCombinado, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 317, 171));
+
+        jBHeladoVainilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H5.png"))); // NOI18N
+        jPanel1.add(jBHeladoVainilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 334, 257, 107));
+
+        jBHeladoOreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/H4.png"))); // NOI18N
+        jPanel1.add(jBHeladoOreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 256, 129));
+        jPanel1.add(jLCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 8, 50, 50));
+        jPanel1.add(jLAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 8, 50, 50));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/Fondo Heladería.png"))); // NOI18N
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +139,14 @@ public class VistaHeladeria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JButton jBHeladoChocolate;
+    private javax.swing.JButton jBHeladoCombinado;
+    private javax.swing.JButton jBHeladoFresa;
+    private javax.swing.JButton jBHeladoOreo;
+    private javax.swing.JButton jBHeladoVainilla;
+    private javax.swing.JLabel jLAtras;
+    private javax.swing.JLabel jLCarrito;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.proyecto.vistas;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -16,6 +14,35 @@ public class VistaRelojeria extends javax.swing.JFrame {
      */
     public VistaRelojeria() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+
+    public JButton getjBCronometro() {
+        return jBCronometro;
+    }
+
+    public JButton getjBDespertador() {
+        return jBDespertador;
+    }
+
+    public JButton getjBRelojPared() {
+        return jBRelojPared;
+    }
+
+    public JButton getjBRolexDaytona() {
+        return jBRolexDaytona;
+    }
+
+    public JButton getjBRolexSubmariner() {
+        return jBRolexSubmariner;
+    }
+
+    public JLabel getjLAtras() {
+        return jLAtras;
+    }
+
+    public JLabel getjLCarrito() {
+        return jLCarrito;
     }
 
     /**
@@ -27,21 +54,63 @@ public class VistaRelojeria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jBRolexDaytona = new javax.swing.JButton();
+        jBRelojPared = new javax.swing.JButton();
+        jBRolexSubmariner = new javax.swing.JButton();
+        jBCronometro = new javax.swing.JButton();
+        jBDespertador = new javax.swing.JButton();
+        jLCarrito = new javax.swing.JLabel();
+        jLAtras = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jBRolexDaytona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/R1.png"))); // NOI18N
+        jPanel1.add(jBRolexDaytona, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 315, 168));
+
+        jBRelojPared.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/R3.png"))); // NOI18N
+        jBRelojPared.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRelojParedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBRelojPared, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 258, 102));
+
+        jBRolexSubmariner.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/R2.png"))); // NOI18N
+        jPanel1.add(jBRolexSubmariner, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 315, 168));
+
+        jBCronometro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/R5.png"))); // NOI18N
+        jPanel1.add(jBCronometro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 334, 258, 104));
+
+        jBDespertador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/R4.png"))); // NOI18N
+        jPanel1.add(jBDespertador, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 258, 128));
+        jPanel1.add(jLCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 8, 50, 50));
+        jPanel1.add(jLAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 8, 50, 50));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/Fondo Relojería.png"))); // NOI18N
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBRelojParedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRelojParedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBRelojParedActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +148,14 @@ public class VistaRelojeria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JButton jBCronometro;
+    private javax.swing.JButton jBDespertador;
+    private javax.swing.JButton jBRelojPared;
+    private javax.swing.JButton jBRolexDaytona;
+    private javax.swing.JButton jBRolexSubmariner;
+    private javax.swing.JLabel jLAtras;
+    private javax.swing.JLabel jLCarrito;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -9,6 +9,10 @@ package com.proyecto.iterator;
  *
  * @author Javier
  */
-public class Iterator {
+public interface Iterator {
+
+    public Object siguiente();
+
+    boolean contieneSiguiente();
 
 }

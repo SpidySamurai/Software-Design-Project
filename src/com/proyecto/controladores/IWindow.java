@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.proyecto.iterator;
+package com.proyecto.controladores;
+
+import java.awt.event.WindowEvent;
 
 /**
  *
  * @author Javier
  */
-public class Aggregate {
+public interface IWindow {
+
+    public void childClosed(WindowEvent e);
 
 }
