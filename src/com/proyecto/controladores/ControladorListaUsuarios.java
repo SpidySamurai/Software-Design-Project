@@ -16,6 +16,7 @@ import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.MutableTreeNode;
 
 /**
  *
@@ -41,29 +42,33 @@ public final class ControladorListaUsuarios {
         DefaultMutableTreeNode clientes = new DefaultMutableTreeNode("Clientes");
         DefaultTreeModel dtm = new DefaultTreeModel(clientes);
 
-        ArrayList<DefaultMutableTreeNode> nodos = new ArrayList<>();
+//        ArrayList<DefaultMutableTreeNode> nodos = new ArrayList<>();
         ArrayList<Cliente> clientesO = new ArrayList<>();
-        ArrayList<Tienda> tiendasO = new ArrayList<Tienda>();
+//        ArrayList<Tienda> tiendasO = new ArrayList<Tienda>();
 
         CentroComercial centroC = CentroComercial.getInstance();
-
         IteratorCentroComercialCliente iteradorCClientes = new IteratorCentroComercialCliente(centroC);
-        IteratorCentroComercialTienda iteradorCTiendas = new IteratorCentroComercialTienda(centroC);
-
-        while (iteradorCTiendas.contieneSiguiente()) {
-            tiendasO.add(iteradorCTiendas.siguiente());
-        }
+//        IteratorCentroComercialTienda iteradorCTiendas = new IteratorCentroComercialTienda(centroC);
+//
+//        while (iteradorCTiendas.contieneSiguiente()) {
+//            tiendasO.add(iteradorCTiendas.siguiente());
+//        }
 
         while (iteradorCClientes.contieneSiguiente()) {
             clientesO.add(iteradorCClientes.siguiente());
         }
-
         for (Cliente c : clientesO) {
             DefaultMutableTreeNode prsn = new DefaultMutableTreeNode();
             prsn.setUserObject(c);
             clientes.add(prsn);
         }
 
+//        DefaultMutableTreeNode tienda1 = new DefaultMutableTreeNode("tienda1");
+//        DefaultMutableTreeNode tienda2 = new DefaultMutableTreeNode("tienda2");
+//        DefaultMutableTreeNode cliente2 = new DefaultMutableTreeNode("Ejemplo cliente");
+//        tienda1.add(cliente2);
+//        clientes.add(tienda1);
+//        clientes.add(tienda2);
         this.vListaClientes.getjTree1().setModel(dtm);
     }
 

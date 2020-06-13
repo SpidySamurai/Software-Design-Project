@@ -26,9 +26,7 @@ public class VistaListaClientes extends javax.swing.JFrame {
     public JTree getjTree1() {
         return jTree1;
     }
-    
-    
-    
+
     public JPanel getjPanel1() {
         return jPanel1;
     }
@@ -36,8 +34,6 @@ public class VistaListaClientes extends javax.swing.JFrame {
     public JScrollPane getjScrollPane2() {
         return jScrollPane2;
     }
-
-    
 
     /**
      * This method is called from within the constructor to initialize the form.

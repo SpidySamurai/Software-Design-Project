@@ -21,7 +21,6 @@ import java.awt.event.WindowEvent;
 public final class ControladorCentro implements ActionListener, IWindow {
 
     private final VistaCentro vistaCentro;
-
     private final CentroComercial centroComercial;
     private final Cliente clienteActual;
 

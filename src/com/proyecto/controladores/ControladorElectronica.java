@@ -5,9 +5,11 @@
  */
 package com.proyecto.controladores;
 
+import com.proyecto.base.Articulo;
 import com.proyecto.base.CentroComercial;
 import com.proyecto.base.Cliente;
 import com.proyecto.vistas.VistaElectronica;
+import com.proyecto.vistas.VistaInfoArticulo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -21,12 +23,14 @@ import java.awt.event.WindowEvent;
 public final class ControladorElectronica implements ActionListener, IWindow {
 
     private final VistaElectronica vElectronica;
+    private final VistaInfoArticulo vInfoA;
 
     private final CentroComercial centroComercial;
     private final Cliente clienteActual;
 
     public ControladorElectronica(Cliente clienteActual, CentroComercial centroComercial) {
         this.vElectronica = new VistaElectronica();
+        this.vInfoA = new VistaInfoArticulo();
 
         this.centroComercial = centroComercial;
         this.clienteActual = clienteActual;
@@ -44,10 +48,24 @@ public final class ControladorElectronica implements ActionListener, IWindow {
 
         mouseListenerAtras();
         mouseListenerCarrito();
+
+        this.vInfoA.getjBAñadir();
+        this.vInfoA.getjBCancelar();
+        this.vInfoA.getjLNombre();
+        this.vInfoA.getjLIdTienda();
+        this.vInfoA.getjLPrecio();
+        this.vInfoA.getjLIdProducto();
     }
 
     public void iniciarVista() {
         this.vElectronica.setVisible(true);
+    }
+
+    public void desplegarInfo(Articulo producto) {
+        this.vInfoA.getjLNombre().setText(producto.getNombreArticulo());
+        this.vInfoA.getjLIdProducto().setText(producto.getIdArticulo());
+        this.vInfoA.getjLIdTienda().setText(producto.getIdTienda());
+        this.vInfoA.getjLPrecio().setText(String.valueOf(producto.getPrecioArticulo()));
     }
 
     @Override

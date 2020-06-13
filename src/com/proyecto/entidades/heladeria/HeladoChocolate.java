@@ -9,7 +9,7 @@ import com.proyecto.decorator.IHelado;
  */
 public class HeladoChocolate extends Articulo implements IHelado {
 
-    public HeladoChocolate(String nombreArt, String idArt, String idTienda, double precioArticulo) {
+    public HeladoChocolate() {
         super("Helado Chocolate", "HEL01", "HELBASH", 9.5);
     }
 

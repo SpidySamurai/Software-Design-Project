@@ -5,6 +5,7 @@ import com.proyecto.vistas.VistaInicial;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import com.proyecto.base.Cliente;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,11 +37,18 @@ public final class ControladorInicio implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (this.vInicial.getjBIngresar() == e.getSource()) {
-            this.vInicial.dispose();
 
             String nombre = this.vInicial.getJTNombre().getText();
+
             Cliente cliente = new Cliente(nombre);
             centroComercial.entrarCliente(cliente);
+
+            int capacidad = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la capacidad del carrito"));
+            while (capacidad < 1 || capacidad > 15) {
+                capacidad = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese una capcidad valida 0 < cap <= 15"));
+            }
+            cliente.setCarrito(centroComercial.getCarrito(5));
+            this.vInicial.dispose();
             new ControladorCentro(cliente, this.centroComercial).iniciarVista();
         }
 
