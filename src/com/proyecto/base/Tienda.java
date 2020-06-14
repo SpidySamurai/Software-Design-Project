@@ -31,8 +31,9 @@ public abstract class Tienda implements Singleton {
     }
 
     public void añadirAlCarrito(CarritoCompras carritoCompras, Articulo producto) {
-        carritoCompras.añadirAlCarrito(producto);
+        this.articulosTienda.remove(producto);
 
+        carritoCompras.añadirAlCarrito(producto);
     }
 
     public void eliminarDelCarrito(CarritoCompras carritoCompras, Articulo producto) {

@@ -21,6 +21,7 @@ public class VistaInfoArticulo extends javax.swing.JFrame {
      */
     public VistaInfoArticulo() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     public JButton getjBAñadir() {
@@ -71,14 +72,16 @@ public class VistaInfoArticulo extends javax.swing.JFrame {
         jLIdProducto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jBAñadir.setText("Añadir");
-        jPanel1.add(jBAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 20, -1, -1));
+        jPanel1.add(jBAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
 
         jBCancelar.setText("Cancelar");
-        jPanel1.add(jBCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+        jPanel1.add(jBCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 60, -1, -1));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -92,17 +95,17 @@ public class VistaInfoArticulo extends javax.swing.JFrame {
         jPanel2.add(jLPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 170, -1));
 
         jLIdProducto.setText("Id:");
-        jPanel2.add(jLIdProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 60, -1));
+        jPanel2.add(jLIdProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 120, -1));
 
         jScrollPane1.setViewportView(jPanel2);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 280, 80));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 300, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

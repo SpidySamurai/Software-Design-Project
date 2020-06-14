@@ -7,16 +7,13 @@ package com.proyecto.controladores;
 
 import com.proyecto.base.CentroComercial;
 import com.proyecto.base.Cliente;
-import com.proyecto.base.Tienda;
 import com.proyecto.iterator.IteratorCentroComercialCliente;
-import com.proyecto.iterator.IteratorCentroComercialTienda;
 import com.proyecto.vistas.VistaListaClientes;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.MutableTreeNode;
 
 /**
  *

@@ -5,11 +5,15 @@
  */
 package com.proyecto.controladores;
 
+import com.proyecto.base.Articulo;
+import com.proyecto.base.Cliente;
+import com.proyecto.iterator.IteratorCarritoComprasArt;
 import com.proyecto.vistas.VistaCarrito;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -18,23 +22,40 @@ import java.awt.event.WindowListener;
 public final class ControladorCarrito implements ActionListener {
 
     private final IWindow ventanaPadre;
-
     private final VistaCarrito vCarrito;
+    private Cliente clienteActual;
 
-    public ControladorCarrito(IWindow ventanaPadre) {
+    public ControladorCarrito(IWindow ventanaPadre, Cliente clienteActual) {
         this.ventanaPadre = ventanaPadre;
+        this.clienteActual = clienteActual;
         vCarrito = new VistaCarrito();
 
         addListener();
+        rellenarVista();
 
     }
 
-    public void addListener() {
+    private void addListener() {
         windowListener();
     }
 
     public void iniciarVista() {
         this.vCarrito.setVisible(true);
+    }
+
+    public void rellenarVista() {
+        DefaultTableModel model = (DefaultTableModel) this.vCarrito.getjTable1().getModel();
+        IteratorCarritoComprasArt IteratorCCA = new IteratorCarritoComprasArt(this.clienteActual.getCarrito());
+        Object rowData[] = new Object[4];
+        while (IteratorCCA.contieneSiguiente()) {
+            Articulo artTemp = IteratorCCA.siguiente();
+            rowData[0] = artTemp.getNombreArticulo();
+            rowData[1] = artTemp.getIdArticulo();
+            rowData[2] = artTemp.getIdTienda();
+            rowData[3] = artTemp.getPrecioArticulo();
+            model.addRow(rowData);
+        }
+
     }
 
     @Override

@@ -11,6 +11,10 @@ import com.proyecto.base.CentroComercial;
 import com.proyecto.base.Cliente;
 import com.proyecto.base.Tienda;
 import com.proyecto.entidades.heladeria.HeladoChocolate;
+import com.proyecto.entidades.heladeria.HeladoCombinado;
+import com.proyecto.entidades.heladeria.HeladoFresa;
+import com.proyecto.entidades.heladeria.HeladoOreo;
+import com.proyecto.entidades.heladeria.HeladoVainilla;
 import com.proyecto.vistas.VistaHeladeria;
 import com.proyecto.vistas.VistaInfoArticulo;
 import java.awt.event.ActionEvent;
@@ -18,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -31,6 +36,7 @@ public final class ControladorHeladeria implements ActionListener, IWindow {
     private final CentroComercial centroComercial;
     private final Cliente clienteActual;
     private final Tienda heladeria;
+    private int index;
 
     public ControladorHeladeria(Cliente clienteActual, CentroComercial centroComercial) {
         this.vHeladeria = new VistaHeladeria();
@@ -63,26 +69,72 @@ public final class ControladorHeladeria implements ActionListener, IWindow {
     }
 
     public void desplegarInfo(Articulo producto) {
-        this.vInfoA.getjLNombre().setText(producto.getNombreArticulo());
-        this.vInfoA.getjLIdProducto().setText(producto.getIdArticulo());
-        this.vInfoA.getjLIdTienda().setText(producto.getIdTienda());
-        this.vInfoA.getjLPrecio().setText(String.valueOf(producto.getPrecioArticulo()));
+        this.vInfoA.getjLNombre().setText("Nombre " + producto.getNombreArticulo());
+        this.vInfoA.getjLIdProducto().setText("Id Producto: " + producto.getIdArticulo());
+        this.vInfoA.getjLIdTienda().setText("Id Tienda: " + producto.getIdTienda());
+        this.vInfoA.getjLPrecio().setText("Precio: " + String.valueOf(producto.getPrecioArticulo()));
     }
 
-    public int stock(Articulo producto) {
-        return this.heladeria.getArticulosTienda().lastIndexOf(producto);
+    public boolean stock(Articulo producto) {
+        for (Articulo a : this.heladeria.getArticulosTienda()) {
+            if (a.getClass() == producto.getClass()) {
+                index = this.heladeria.getArticulosTienda().indexOf(a);
+                return true;
+            }
+        }
+        index = -1;
+        return false;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (this.vHeladeria.getjBHeladoChocolate() == e.getSource()) {
+            stock(new HeladoChocolate());
             this.vHeladeria.disable();
+            this.desplegarInfo(new HeladoChocolate());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vHeladeria.getjBHeladoCombinado() == e.getSource()) {
+            stock(new HeladoCombinado());
+            this.vHeladeria.disable();
+            this.desplegarInfo(new HeladoCombinado());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vHeladeria.getjBHeladoFresa() == e.getSource()) {
+            stock(new HeladoFresa());
+            this.vHeladeria.disable();
+            this.desplegarInfo(new HeladoFresa());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vHeladeria.getjBHeladoOreo() == e.getSource()) {
+            stock(new HeladoOreo());
+            this.vHeladeria.disable();
+            this.desplegarInfo(new HeladoOreo());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vHeladeria.getjBHeladoVainilla() == e.getSource()) {
+            stock(new HeladoVainilla());
+            this.vHeladeria.disable();
+            this.desplegarInfo(new HeladoVainilla());
             this.vInfoA.setVisible(true);
 
         }
         if (this.vInfoA.getjBCancelar() == e.getSource()) {
             this.vHeladeria.enable();
             this.vInfoA.dispose();
+        }
+        if (this.vInfoA.getjBAñadir() == e.getSource()) {
+            if (index >= 0) {
+                this.heladeria.añadirAlCarrito(this.clienteActual.getCarrito(), this.heladeria.getArticulosTienda().get(index));
+                this.vInfoA.dispose();
+                this.vHeladeria.enable();
+            } else {
+                JOptionPane.showMessageDialog(null, "Este articulo no esta disponible.");
+            }
         }
     }
 
@@ -120,7 +172,7 @@ public final class ControladorHeladeria implements ActionListener, IWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 ControladorHeladeria.this.vHeladeria.disable();
-                new ControladorCarrito(ControladorHeladeria.this).iniciarVista();
+                new ControladorCarrito(ControladorHeladeria.this,ControladorHeladeria.this.clienteActual).iniciarVista();
             }
 
             @Override

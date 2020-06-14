@@ -18,6 +18,7 @@ public final class CarritoCompras {
 
     public CarritoCompras(int capacidad) {
         this.capacidad = capacidad;
+        this.articulos = new ArrayList<>();
         this.estadoActual = new EstadoVacio();
     }
 

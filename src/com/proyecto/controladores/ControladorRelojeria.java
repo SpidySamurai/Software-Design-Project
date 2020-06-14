@@ -5,9 +5,16 @@
  */
 package com.proyecto.controladores;
 
+import com.proyecto.abstractfactory.FactoryRelojeria;
 import com.proyecto.base.Articulo;
 import com.proyecto.base.CentroComercial;
 import com.proyecto.base.Cliente;
+import com.proyecto.base.Tienda;
+import com.proyecto.entidades.relojeria.Cronometro;
+import com.proyecto.entidades.relojeria.Despertador;
+import com.proyecto.entidades.relojeria.RelojPared;
+import com.proyecto.entidades.relojeria.RolexDaytona;
+import com.proyecto.entidades.relojeria.RolexSubmariner;
 import com.proyecto.vistas.VistaInfoArticulo;
 import com.proyecto.vistas.VistaRelojeria;
 import java.awt.event.ActionEvent;
@@ -15,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,10 +35,13 @@ public final class ControladorRelojeria implements ActionListener, IWindow {
 
     private final CentroComercial centroComercial;
     private final Cliente clienteActual;
+    private final Tienda relojeria;
+    private int index;
 
     public ControladorRelojeria(Cliente clienteActual, CentroComercial centroComercial) {
         this.vRelojeria = new VistaRelojeria();
         this.vInfoA = new VistaInfoArticulo();
+        relojeria = new FactoryRelojeria().crearTienda();
 
         this.centroComercial = centroComercial;
         this.clienteActual = clienteActual;
@@ -48,12 +59,8 @@ public final class ControladorRelojeria implements ActionListener, IWindow {
         mouseListenerAtras();
         mouseListenerCarrito();
 
-        this.vInfoA.getjBAñadir();
-        this.vInfoA.getjBCancelar();
-        this.vInfoA.getjLNombre();
-        this.vInfoA.getjLIdTienda();
-        this.vInfoA.getjLPrecio();
-        this.vInfoA.getjLIdProducto();
+        this.vInfoA.getjBAñadir().addActionListener(this);
+        this.vInfoA.getjBCancelar().addActionListener(this);
 
     }
 
@@ -68,8 +75,68 @@ public final class ControladorRelojeria implements ActionListener, IWindow {
         this.vInfoA.getjLPrecio().setText(String.valueOf(producto.getPrecioArticulo()));
     }
 
+    public boolean stock(Articulo producto) {
+        for (Articulo a : this.relojeria.getArticulosTienda()) {
+            if (a.getClass() == producto.getClass()) {
+                index = this.relojeria.getArticulosTienda().indexOf(a);
+                return true;
+            }
+        }
+        index = -1;
+        return false;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (this.vRelojeria.getjBRolexDaytona() == e.getSource()) {
+            stock(new RolexDaytona());
+            this.vRelojeria.disable();
+            this.desplegarInfo(new RolexDaytona());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vRelojeria.getjBRolexSubmariner() == e.getSource()) {
+            stock(new RolexSubmariner());
+            this.vRelojeria.disable();
+            this.desplegarInfo(new RolexSubmariner());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vRelojeria.getjBRelojPared() == e.getSource()) {
+            stock(new RelojPared());
+            this.vRelojeria.disable();
+            this.desplegarInfo(new RelojPared());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vRelojeria.getjBDespertador() == e.getSource()) {
+            stock(new Despertador());
+            this.vRelojeria.disable();
+            this.desplegarInfo(new Despertador());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vRelojeria.getjBCronometro() == e.getSource()) {
+            stock(new Cronometro());
+            this.vRelojeria.disable();
+            this.desplegarInfo(new Cronometro());
+            this.vInfoA.setVisible(true);
+
+        }
+        if (this.vInfoA.getjBCancelar() == e.getSource()) {
+            this.vRelojeria.enable();
+            this.vInfoA.dispose();
+        }
+        if (this.vInfoA.getjBAñadir() == e.getSource()) {
+            if (index >= 0) {
+                this.relojeria.añadirAlCarrito(this.clienteActual.getCarrito(), this.relojeria.getArticulosTienda().get(index));
+                this.vInfoA.dispose();
+                this.vRelojeria.enable();
+            } else {
+                JOptionPane.showMessageDialog(null, "Este articulo no esta disponible.");
+            }
+        }
+
     }
 
     private void mouseListenerAtras() {
@@ -106,7 +173,7 @@ public final class ControladorRelojeria implements ActionListener, IWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 ControladorRelojeria.this.vRelojeria.disable();
-                new ControladorCarrito(ControladorRelojeria.this).iniciarVista();
+                new ControladorCarrito(ControladorRelojeria.this, ControladorRelojeria.this.clienteActual).iniciarVista();
             }
 
             @Override

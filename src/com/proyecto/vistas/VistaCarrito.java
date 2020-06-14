@@ -1,5 +1,8 @@
 package com.proyecto.vistas;
 
+import javax.swing.JButton;
+import javax.swing.JTable;
+
 /**
  *
  * @author Javier
@@ -14,6 +17,18 @@ public class VistaCarrito extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
+    public JButton getjBAñadir() {
+        return jBAñadir;
+    }
+
+    public JButton getjBPagar() {
+        return jBPagar;
+    }
+
+    public JTable getjTable1() {
+        return jTable1;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,10 +41,10 @@ public class VistaCarrito extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jBPagar = new javax.swing.JButton();
+        jBAñadir = new javax.swing.JButton();
+        jBEliminar = new javax.swing.JButton();
+        jBVaciar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -38,17 +53,14 @@ public class VistaCarrito extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Nombre", "Id Producto", "Id Tienda", "Precio"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, true, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -66,17 +78,17 @@ public class VistaCarrito extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 470, 230));
 
-        jButton1.setText("jButton1");
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, -1, -1));
+        jBPagar.setText("Pagar");
+        jPanel3.add(jBPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 70, -1));
 
-        jButton2.setText("jButton2");
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, -1, -1));
+        jBAñadir.setText("Añadir");
+        jPanel3.add(jBAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, 70, -1));
 
-        jButton3.setText("jButton3");
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, -1, -1));
+        jBEliminar.setText("Eliminar");
+        jPanel3.add(jBEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
 
-        jButton4.setText("jButton4");
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, -1, -1));
+        jBVaciar.setText("Vaciar");
+        jPanel3.add(jBVaciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 70, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,10 +144,10 @@ public class VistaCarrito extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jBAñadir;
+    private javax.swing.JButton jBEliminar;
+    private javax.swing.JButton jBPagar;
+    private javax.swing.JButton jBVaciar;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

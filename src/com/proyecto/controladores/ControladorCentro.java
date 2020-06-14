@@ -75,7 +75,7 @@ public final class ControladorCentro implements ActionListener, IWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 ControladorCentro.this.vistaCentro.disable();
-                new ControladorCarrito(ControladorCentro.this).iniciarVista();
+                new ControladorCarrito(ControladorCentro.this, ControladorCentro.this.clienteActual).iniciarVista();
 
             }
 
