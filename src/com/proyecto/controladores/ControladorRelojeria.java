@@ -53,7 +53,7 @@ public final class ControladorRelojeria implements ActionListener, IWindow {
         this.vRelojeria.getjBRolexSubmariner().addActionListener(this);
         this.vRelojeria.getjBRolexDaytona().addActionListener(this);
         this.vRelojeria.getjBRelojPared().addActionListener(this);
-        this.vRelojeria.getjBRelojPared().addActionListener(this);
+        this.vRelojeria.getjBDespertador().addActionListener(this);
         this.vRelojeria.getjBCronometro().addActionListener(this);
 
         mouseListenerAtras();

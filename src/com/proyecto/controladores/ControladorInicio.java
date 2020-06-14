@@ -47,7 +47,7 @@ public final class ControladorInicio implements ActionListener {
             while (capacidad < 1 || capacidad > 15) {
                 capacidad = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese una capcidad valida 0 < cap <= 15"));
             }
-            cliente.setCarrito(centroComercial.getCarrito(5));
+            cliente.setCarrito(centroComercial.getCarrito(capacidad));
             this.vInicial.dispose();
             new ControladorCentro(cliente, this.centroComercial).iniciarVista();
         }

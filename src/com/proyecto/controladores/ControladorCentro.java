@@ -7,12 +7,14 @@ package com.proyecto.controladores;
 
 import com.proyecto.base.CentroComercial;
 import com.proyecto.base.Cliente;
+import com.proyecto.iterator.IteratorCarritoComprasArt;
 import com.proyecto.vistas.VistaCentro;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -106,9 +108,14 @@ public final class ControladorCentro implements ActionListener, IWindow {
         MouseListener mouseListener = new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ControladorCentro.this.centroComercial.salirCliente(ControladorCentro.this.clienteActual);
-                ControladorCentro.this.vistaCentro.dispose();
-                new ControladorInicio().iniciarVista();
+                IteratorCarritoComprasArt iteratorCCA = new IteratorCarritoComprasArt(ControladorCentro.this.clienteActual.getCarrito());
+                if (!iteratorCCA.contieneSiguiente()) {
+                    ControladorCentro.this.centroComercial.salirCliente(ControladorCentro.this.clienteActual);
+                    ControladorCentro.this.vistaCentro.dispose();
+                    new ControladorInicio().iniciarVista();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Tienes articulos por pagar, no puedes salir.");
+                }
             }
 
             @Override

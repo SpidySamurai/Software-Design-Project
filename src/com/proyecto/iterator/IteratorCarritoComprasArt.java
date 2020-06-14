@@ -18,7 +18,7 @@ public class IteratorCarritoComprasArt implements Iterator {
 
     @Override
     public Articulo siguiente() {
-        return carritoCompras.getArticulosCarrito().get(posicion++);
+        return carritoCompras.getArticulosCarrito().get(this.posicion++);
     }
 
     @Override

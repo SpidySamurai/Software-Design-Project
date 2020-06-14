@@ -35,4 +35,8 @@ public class Articulo {
         return precioArticulo;
     }
 
+    @Override
+    public String toString() {
+        return nombreArticulo;
+    }
 }

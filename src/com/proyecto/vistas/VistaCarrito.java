@@ -1,7 +1,11 @@
 package com.proyecto.vistas;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /**
  *
@@ -15,10 +19,22 @@ public class VistaCarrito extends javax.swing.JFrame {
     public VistaCarrito() {
         initComponents();
         setLocationRelativeTo(null);
+        onlyOneRow();
     }
 
-    public JButton getjBAñadir() {
-        return jBAñadir;
+//    public JButton getjBAñadir() {
+//        return jBAñadir;
+//    }
+    public JLabel getjLCosto() {
+        return jLabel1;
+    }
+
+    public JButton getjBEliminar() {
+        return jBEliminar;
+    }
+
+    public JButton getjBVaciar() {
+        return jBVaciar;
     }
 
     public JButton getjBPagar() {
@@ -27,6 +43,29 @@ public class VistaCarrito extends javax.swing.JFrame {
 
     public JTable getjTable1() {
         return jTable1;
+    }
+
+    public void onlyOneRow() {
+        jTable1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        if (jTable1.getRowSelectionAllowed()) { // true by default
+            ListSelectionModel rowSM = jTable1.getSelectionModel();
+            rowSM.addListSelectionListener(new ListSelectionListener() {
+                public void valueChanged(ListSelectionEvent e) {
+                    //Ignore extra messages.
+                    if (e.getValueIsAdjusting()) {
+                        return;
+                    }
+//                    ListSelectionModel lsm = (ListSelectionModel) e.getSource();
+//                    if (lsm.isSelectionEmpty()) {
+//                        System.out.println("No rows are selected.");
+//                    } else {
+//                        int selectedRow = lsm.getMinSelectionIndex();
+//                        System.out.println("Row " + selectedRow
+//                                + " is now selected.");
+//                    }
+                }
+            });
+        }
     }
 
     /**
@@ -38,18 +77,30 @@ public class VistaCarrito extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jBPagar = new javax.swing.JButton();
         jBAñadir = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jBPagar = new javax.swing.JButton();
         jBEliminar = new javax.swing.JButton();
         jBVaciar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+
+        jBAñadir.setText("Añadir");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jBPagar.setText("Pagar");
+        jPanel3.add(jBPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 210, 90, -1));
+
+        jBEliminar.setText("Eliminar");
+        jPanel3.add(jBEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 20, 90, -1));
+
+        jBVaciar.setText("Vaciar");
+        jPanel3.add(jBVaciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 60, 90, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,31 +129,21 @@ public class VistaCarrito extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 470, 230));
 
-        jBPagar.setText("Pagar");
-        jPanel3.add(jBPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 70, -1));
-
-        jBAñadir.setText("Añadir");
-        jPanel3.add(jBAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, 70, -1));
-
-        jBEliminar.setText("Eliminar");
-        jPanel3.add(jBEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
-
-        jBVaciar.setText("Vaciar");
-        jPanel3.add(jBVaciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 70, -1));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Total:");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 174, 120, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
         );
 
         pack();
@@ -148,6 +189,7 @@ public class VistaCarrito extends javax.swing.JFrame {
     private javax.swing.JButton jBEliminar;
     private javax.swing.JButton jBPagar;
     private javax.swing.JButton jBVaciar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

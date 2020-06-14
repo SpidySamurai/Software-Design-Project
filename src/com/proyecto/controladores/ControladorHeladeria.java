@@ -172,7 +172,7 @@ public final class ControladorHeladeria implements ActionListener, IWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 ControladorHeladeria.this.vHeladeria.disable();
-                new ControladorCarrito(ControladorHeladeria.this,ControladorHeladeria.this.clienteActual).iniciarVista();
+                new ControladorCarrito(ControladorHeladeria.this, ControladorHeladeria.this.clienteActual).iniciarVista();
             }
 
             @Override

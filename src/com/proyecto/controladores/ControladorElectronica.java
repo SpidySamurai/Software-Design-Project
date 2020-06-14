@@ -173,7 +173,7 @@ public final class ControladorElectronica implements ActionListener, IWindow {
             @Override
             public void mouseClicked(MouseEvent e) {
                 ControladorElectronica.this.vElectronica.disable();
-                new ControladorCarrito(ControladorElectronica.this,ControladorElectronica.this.clienteActual).iniciarVista();
+                new ControladorCarrito(ControladorElectronica.this, ControladorElectronica.this.clienteActual).iniciarVista();
             }
 
             @Override
