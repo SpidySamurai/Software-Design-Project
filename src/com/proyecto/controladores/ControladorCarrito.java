@@ -71,13 +71,13 @@ public final class ControladorCarrito implements ActionListener {
     public void devolverTienda(Articulo producto) {
         //Tiendas
         this.clienteActual.getCarrito().quitarDelCarrito(producto);
-        if (producto.getIdTienda() == new FactoryHeladeria().crearTienda().getIdTienda()) {
+        if (producto.getIdTienda().equals(new FactoryHeladeria().crearTienda().getIdTienda())) {
             new FactoryHeladeria().crearTienda().añadirProductoTienda(producto);
         }
-        if (producto.getIdTienda() == new FactoryRelojeria().crearTienda().getIdTienda()) {
+        if (producto.getIdTienda().equals(new FactoryRelojeria().crearTienda().getIdTienda())) {
             new FactoryRelojeria().crearTienda().añadirProductoTienda(producto);
         }
-        if (producto.getIdTienda() == new FactoryElectronica().crearTienda().getIdTienda()) {
+        if (producto.getIdTienda().equals(new FactoryElectronica().crearTienda().getIdTienda())) {
             new FactoryElectronica().crearTienda().añadirProductoTienda(producto);
         }
     }
