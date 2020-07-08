@@ -22,9 +22,9 @@ public class VistaCentro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
-    public JButton getBtn_Carrito() {
-        return btn_Carrito;
-    }
+//    public JButton getBtn_Carrito() {
+//        return btn_Carrito;
+//    }
 
     public JButton getBtn_Electronica() {
         return btn_Electronica;
@@ -55,7 +55,6 @@ public class VistaCentro extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         msjBienvenida = new javax.swing.JLabel();
-        btn_Carrito = new javax.swing.JButton();
         btn_Heladeria = new javax.swing.JButton();
         btn_Electronica = new javax.swing.JButton();
         btn_Relojeria = new javax.swing.JButton();
@@ -69,9 +68,6 @@ public class VistaCentro extends javax.swing.JFrame {
         msjBienvenida.setForeground(new java.awt.Color(255, 255, 255));
         msjBienvenida.setText("Buen dia (nombre)! Bienvenido al Centro Comercial!");
         jPanel1.add(msjBienvenida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 30));
-
-        btn_Carrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/carro-de-la-compra (1).png"))); // NOI18N
-        jPanel1.add(btn_Carrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 50, 40));
 
         btn_Heladeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/HeladeriaLOGO.png"))); // NOI18N
         jPanel1.add(btn_Heladeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 200, 380));
@@ -140,7 +136,6 @@ public class VistaCentro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
-    private javax.swing.JButton btn_Carrito;
     private javax.swing.JButton btn_Electronica;
     private javax.swing.JButton btn_Heladeria;
     private javax.swing.JButton btn_Relojeria;

@@ -47,12 +47,14 @@ public class vistaMenu extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btn_Carrito = new javax.swing.JButton();
         btn_Relojeria = new javax.swing.JButton();
         btn_Electronica = new javax.swing.JButton();
         btn_Heladeria = new javax.swing.JButton();
-        btn_Carrito = new javax.swing.JButton();
         msjBienvenida = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
+
+        btn_Carrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/carro-de-la-compra (1).png"))); // NOI18N
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -64,9 +66,6 @@ public class vistaMenu extends javax.swing.JPanel {
 
         btn_Heladeria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/HeladeriaLOGO.png"))); // NOI18N
         add(btn_Heladeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 200, 380));
-
-        btn_Carrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/proyecto/imagenes/carro-de-la-compra (1).png"))); // NOI18N
-        add(btn_Carrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 50, 40));
 
         msjBienvenida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         msjBienvenida.setForeground(new java.awt.Color(255, 255, 255));
